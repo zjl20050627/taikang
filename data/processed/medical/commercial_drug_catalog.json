@@ -1,0 +1,53 @@
+{
+  "categories": [
+    {
+      "code": "XA",
+      "name": "消化道和代谢方面的药物"
+    },
+    {
+      "code": "XA16",
+      "name": "其他消化道及代谢用药"
+    },
+    {
+      "code": "XA16A",
+      "name": "其他消化道及代谢用药"
+    },
+    {
+      "code": "XA16AB",
+      "name": "酶类"
+    },
+    {
+      "code": "XA16AX",
+      "name": "各种消化道产物及代谢产物"
+    }
+  ],
+  "drugs": [
+    {
+      "code": "16",
+      "name": "其他消化道及代谢用药",
+      "brand_name": "XA16A",
+      "indication": "其他消化道及代谢用药",
+      "manufacturer": "XA16AB",
+      "authorized_company": "酶类",
+      "validity_period": "1"
+    },
+    {
+      "code": "01",
+      "name": "抗肿瘤药",
+      "brand_name": "XL01F",
+      "indication": "单克隆抗体和抗体药物偶联物",
+      "manufacturer": "XL01FD",
+      "authorized_company": "HER2抑制剂",
+      "validity_period": "4"
+    },
+    {
+      "code": "06",
+      "name": "精神兴奋药",
+      "brand_name": "XN06D",
+      "indication": "抗痴呆药",
+      "manufacturer": "XN06DX",
+      "authorized_company": "其他抗痴呆药",
+      "validity_period": "18"
+    }
+  ]
+}
