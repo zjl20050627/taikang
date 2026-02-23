@@ -19,35 +19,178 @@
     {
       "code": "XA16AX",
       "name": "各种消化道产物及代谢产物"
+    },
+    {
+      "code": "XL",
+      "name": "抗肿瘤药及免疫调节剂"
+    },
+    {
+      "code": "XL01",
+      "name": "抗肿瘤药"
+    },
+    {
+      "code": "XL01F",
+      "name": "单克隆抗体和抗体药物偶联物"
+    },
+    {
+      "code": "XL01FX",
+      "name": "其他单克隆抗体和抗体药物偶联物"
+    },
+    {
+      "code": "XL01X",
+      "name": "其他抗肿瘤药"
+    },
+    {
+      "code": "XL01XL",
+      "name": "抗肿瘤细胞和基因治疗"
+    },
+    {
+      "code": "XL01XX",
+      "name": "其他抗肿瘤药"
+    },
+    {
+      "code": "XN",
+      "name": "神经系统药物"
+    },
+    {
+      "code": "XN06",
+      "name": "精神兴奋药"
+    },
+    {
+      "code": "XN06D",
+      "name": "抗痴呆药"
+    },
+    {
+      "code": "XN06DX",
+      "name": "其他抗痴呆药"
     }
   ],
   "drugs": [
     {
+      "code": "1",
+      "name": "注射用维拉苷酶β",
+      "brand_name": "戈芮宁",
+      "indication": "适用于12岁及以上青少年和成人Ⅰ型和Ⅲ 型戈谢病患者的长期酶替代治疗(ERT)。北海康成（上海）生物 科技有限公司北海康成（上海）生 物科技有限公司2026年1月1日至 2027年12月31日 XA16AX 各种消化道产物及代谢产物",
+      "manufacturer": "",
+      "authorized_company": "",
+      "validity_period": ""
+    },
+    {
+      "code": "2",
+      "name": "盐酸沙丙蝶呤片",
+      "brand_name": "海普益",
+      "indication": "适用于对本品治疗有反应的四氢生物蝶呤 (BH4)缺乏症所导致的高苯丙氨酸血症 (HPA)，可用于成人及4岁以上儿童。本品 在0-4岁儿童中无充分的临床用药经验， 若必须使用，须在专科医生的严格指导下 慎重使用。山东新时代药业有限公 司山东新时代药业有限 公司2026年1月1日至 2027年12月31日",
+      "manufacturer": "",
+      "authorized_company": "",
+      "validity_period": ""
+    },
+    {
+      "code": "3",
+      "name": "注射用替度格鲁肽",
+      "brand_name": "瑞唯抒",
+      "indication": "适用于治疗短肠综合征成人和1岁及以上 儿童患者。仅在患者经过一段时间肠道适 应后，病情稳定且依赖肠外营养支持的情 况下进行本品治疗。Takeda Pharmaceuticals International AG Ireland Branch武田（中国）国际贸 易有限公司2026年1月1日至 2027年12月31日 XL 抗肿瘤药及免疫调节剂 XL",
+      "manufacturer": "",
+      "authorized_company": "",
+      "validity_period": ""
+    },
+    {
+      "code": "4",
+      "name": "注射用泽尼达妥单抗",
+      "brand_name": "百赫安",
+      "indication": "适用于既往接受过全身治疗的HER2高表达 (IHC3+)的不可切除局部晚期或转移性胆 道癌患者。百济神州（苏州）生物 科技有限公司百济神州（北京）生 物科技有限公司2026年1月1日至 2027年12月31日 XL01FX 其他单克隆抗体和抗体药物偶联物",
+      "manufacturer": "",
+      "authorized_company": "",
+      "validity_period": ""
+    },
+    {
+      "code": "5",
+      "name": "埃纳妥单抗注射液",
+      "brand_name": "易瑞欧",
+      "indication": "适用于既往接受过至少三线治疗(包括一 种蛋白酶体抑制剂、一种免疫调节剂和一 种抗CD38单克隆抗体)的复发或难治性多 发性骨髓瘤成人患者的治疗。Pfizer Inc. 辉瑞投资有限公司2026年1月1日至 2027年12月31日",
+      "manufacturer": "",
+      "authorized_company": "",
+      "validity_period": ""
+    },
+    {
+      "code": "6",
+      "name": "达妥昔单抗β注射液",
+      "brand_name": "凯泽百",
+      "indication": "适用于治疗≥12月龄的高危神经母细胞瘤 患者，这些患者既往接受过诱导化疗且至 少获得部分缓解，并且随后进行过清髓性 治疗和干细胞移植治疗；也适用于治疗伴 或不伴有残留病灶的复发性或难治性神经 母细胞瘤。在治疗复发性神经母细胞瘤之 前，应采取适当措施使活动性进展性疾病 保持稳定。Recordati Netherlands B.V.百济神州（北京）生 物科技有限公司2026年1月1日至 2027年12月31日 第",
+      "manufacturer": "",
+      "authorized_company": "",
+      "validity_period": ""
+    },
+    {
+      "code": "8",
+      "name": "塔奎妥单抗注射液",
+      "brand_name": "拓立珂",
+      "indication": "单药适用于既往接受过至少三线治疗(包 括一种蛋白酶体抑制剂、一种免疫调节剂 和一种抗CD38抗体)的复发或难治性多发 性骨髓瘤成人患者。Janssen-Cilag International NV强生制药有限公司2026年1月1日至 2027年12月31日",
+      "manufacturer": "",
+      "authorized_company": "",
+      "validity_period": ""
+    },
+    {
+      "code": "11",
+      "name": "纳基奥仑赛注射液",
+      "brand_name": "源瑞达",
+      "indication": "适用于成人复发或难治性B细胞急性淋巴 细胞白血病。合源生物科技股份有限 公司合源生物科技股份有 限公司2026年1月1日至 2027年12月31日 第",
+      "manufacturer": "",
+      "authorized_company": "",
+      "validity_period": ""
+    },
+    {
+      "code": "13",
+      "name": "伊基奥仑赛注射液",
+      "brand_name": "福可苏",
+      "indication": "用于治疗复发或难治性多发性骨髓瘤成人 患者，既往经过至少3线治疗后进展(至少 使用过一种蛋白酶体抑制剂及免疫调节 剂)。南京驯鹿生物医药有限 公司南京驯鹿生物医药有 限公司2026年1月1日至 2027年12月31日",
+      "manufacturer": "",
+      "authorized_company": "",
+      "validity_period": ""
+    },
+    {
+      "code": "14",
+      "name": "泽沃基奥仑赛注射液",
+      "brand_name": "赛恺泽",
+      "indication": "用于治疗复发或难治性多发性骨髓瘤成人 患者，既往经过至少3线治疗后进展(至少 使用过一种蛋白酶体抑制剂及免疫调节 剂)。恺兴生命科技（上海） 有限公司恺兴生命科技（上 海）有限公司2026年1月1日至 2027年12月31日 XL01XX 其他抗肿瘤药",
+      "manufacturer": "",
+      "authorized_company": "",
+      "validity_period": ""
+    },
+    {
+      "code": "15",
+      "name": "甲苯磺酰胺注射液",
+      "brand_name": "普罗仙安",
+      "indication": "适用于中央型非小细胞肺癌成人患者，减 轻重度气道阻塞(50%＜气管梗阻≤75%； 或单侧主支气管梗阻＞50%； 或双侧主支 气管梗阻，任一单侧梗阻＞50%，且双侧 梗阻未同时＞75%)症状。天津红日健达康医药科 技有限公司天津红日健达康医药 科技有限公司2026年1月1日至 2027年12月31日",
+      "manufacturer": "",
+      "authorized_company": "",
+      "validity_period": ""
+    },
+    {
       "code": "16",
-      "name": "其他消化道及代谢用药",
-      "brand_name": "XA16A",
-      "indication": "其他消化道及代谢用药",
-      "manufacturer": "XA16AB",
-      "authorized_company": "酶类",
-      "validity_period": "1"
+      "name": "氢溴酸他泽司他片",
+      "brand_name": "达唯珂单药",
+      "indication": "用于既往接受过至少两种系统性治疗 后的EZH2突变阳性复发或难治性滤泡性淋 巴瘤(FL)成人患者。Epizyme, Inc.和记黄埔医药（上 海）有限公司2026年1月1日至 2027年12月31日",
+      "manufacturer": "",
+      "authorized_company": "",
+      "validity_period": ""
     },
     {
-      "code": "01",
-      "name": "抗肿瘤药",
-      "brand_name": "XL01F",
-      "indication": "单克隆抗体和抗体药物偶联物",
-      "manufacturer": "XL01FD",
-      "authorized_company": "HER2抑制剂",
-      "validity_period": "4"
+      "code": "18",
+      "name": "多奈单抗注射液",
+      "brand_name": "记能达",
+      "indication": "用于治疗由阿尔茨海默病引起的轻度认知 障碍和阿尔茨海默病轻度痴呆。Eli Lilly and Company礼来贸易有限公司2026年1月1日至 2027年12月31日",
+      "manufacturer": "",
+      "authorized_company": "",
+      "validity_period": ""
     },
     {
-      "code": "06",
-      "name": "精神兴奋药",
-      "brand_name": "XN06D",
-      "indication": "抗痴呆药",
-      "manufacturer": "XN06DX",
-      "authorized_company": "其他抗痴呆药",
-      "validity_period": "18"
+      "code": "19",
+      "name": "仑卡奈单抗注射液",
+      "brand_name": "乐意保",
+      "indication": "用于治疗由阿尔茨海默病引起的轻度认知 障碍和阿尔茨海默病轻度痴呆。Eisai Inc.卫材（中国）药业有 限公司2026年1月1日至 2027年12月31日 第",
+      "manufacturer": "",
+      "authorized_company": "",
+      "validity_period": ""
     }
   ]
 }

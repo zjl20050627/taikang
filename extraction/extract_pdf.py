@@ -19,36 +19,99 @@ def extract_commercial_drug_catalog(pdf_path: str) -> Dict[str, Any]:
     
     # 解析药品分类
     categories = []
-    category_pattern = r'XA\w*\s+[\u4e00-\u9fa5]+'
+    # 提取分类信息（如XA 消化道和代谢方面的药物）
+    category_pattern = r'(X[A-Z]\w*)\s+([\u4e00-\u9fa5]+(?:\s+[\u4e00-\u9fa5]+)*)'
     category_matches = re.findall(category_pattern, full_text)
+    
     for match in category_matches:
-        parts = match.split()
-        if len(parts) >= 2:
+        code = match[0].strip()
+        name = match[1].strip()
+        if code and name:
             categories.append({
-                "code": parts[0],
-                "name": ' '.join(parts[1:])
+                "code": code,
+                "name": name
             })
     
     # 解析药品信息
     drugs = []
-    # 匹配药品行：编号 药品名称 商品名 适应症 上市许可持有人 被授权企业 有效期
-    drug_pattern = r'(\d+)\s+([\u4e00-\u9fa5\w-]+)\s+([\u4e00-\u9fa5\w-]+)\s+([\u4e00-\u9fa5\w\s]+?)\s+([\u4e00-\u9fa5\w-]+)\s+([\u4e00-\u9fa5\w-]+)\s+([\d\u4e00-\u9fa5\-]+)'
-    drug_matches = re.findall(drug_pattern, full_text)
+    
+    # 使用正则表达式直接匹配药品信息
+    # 模式：编号 + 药品名称 + 商品名 + 适应症
+    drug_pattern = r'(\d+)\s+([^\d]+?)\s+(\w+?)(适用于|用于|单药适用于|联合用于)(.*?)(?=\d+\s+|$)'
+    drug_matches = re.findall(drug_pattern, full_text, re.DOTALL)
     
     for match in drug_matches:
-        drugs.append({
-            "code": match[0],
-            "name": match[1],
-            "brand_name": match[2],
-            "indication": match[3],
-            "manufacturer": match[4],
-            "authorized_company": match[5],
-            "validity_period": match[6]
-        })
+        code = match[0].strip()
+        name = match[1].strip()
+        brand_name = match[2].strip()
+        indication_prefix = match[3].strip()
+        indication = (indication_prefix + match[4]).strip()
+        
+        # 清理适应症文本
+        indication = re.sub(r'\s+', ' ', indication)
+        indication = re.sub(r'\n', ' ', indication)
+        
+        if code and name and indication:
+            drugs.append({
+                "code": code,
+                "name": name,
+                "brand_name": brand_name,
+                "indication": indication,
+                "manufacturer": "",
+                "authorized_company": "",
+                "validity_period": ""
+            })
+    
+    # 如果正则表达式匹配失败，使用备用方法
+    if not drugs:
+        # 分割文本为行
+        lines = full_text.split('\n')
+        
+        # 药品信息行的特征：包含编号、药品名称、商品名、适应症等
+        drug_lines = []
+        for line in lines:
+            line = line.strip()
+            if line:
+                # 查找包含数字编号的行
+                if re.match(r'^\d+\s+', line):
+                    drug_lines.append(line)
+        
+        # 解析药品行
+        for line in drug_lines:
+            # 分割行，提取药品信息
+            parts = line.split()
+            if len(parts) >= 4:
+                # 编号
+                code = parts[0]
+                # 药品名称（从第1个元素到倒数第2个元素）
+                name = ' '.join(parts[1:-2])
+                # 商品名（倒数第2个元素）
+                brand_name = parts[-2]
+                # 适应症（倒数第1个元素）
+                indication = parts[-1]
+                
+                if code and name and indication:
+                    drugs.append({
+                        "code": code,
+                        "name": name,
+                        "brand_name": brand_name,
+                        "indication": indication,
+                        "manufacturer": "",
+                        "authorized_company": "",
+                        "validity_period": ""
+                    })
+    
+    # 去重药品
+    unique_drugs = []
+    seen_codes = set()
+    for drug in drugs:
+        if drug['code'] not in seen_codes:
+            seen_codes.add(drug['code'])
+            unique_drugs.append(drug)
     
     return {
         "categories": categories,
-        "drugs": drugs
+        "drugs": unique_drugs
     }
 
 def extract_medical_insurance_catalog(pdf_path: str) -> Dict[str, Any]:
@@ -98,6 +161,8 @@ def main():
         with open(os.path.join(output_dir, 'commercial_drug_catalog.json'), 'w', encoding='utf-8') as f:
             json.dump(commercial_data, f, ensure_ascii=False, indent=2)
         print(f"商业健康保险创新药品目录提取完成，保存在：{os.path.join(output_dir, 'commercial_drug_catalog.json')}")
+        print(f"提取到 {len(commercial_data.get('categories', []))} 个分类")
+        print(f"提取到 {len(commercial_data.get('drugs', []))} 个药品")
     
     # 处理国家基本医疗保险药品目录
     medical_insurance_pdf = os.path.join(data_dir, '国家基本医疗保险、生育保险和工伤保险药品目录.pdf')
