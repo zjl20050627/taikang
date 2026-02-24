@@ -6,7 +6,7 @@ llm:
     api_key: "ZHIPUAI_API_KEY"   # 后续替换为.env文件读取
     model: "glm-4.7"              # 额度够
     temperature: 0.3
-    max_tokens: 1024
+    max_tokens: 4096             # 为思考模型留足空间
 
 neo4j:
   uri: "NEO4J_URI"               # 后续替换为.env文件
