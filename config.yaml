@@ -1,0 +1,19 @@
+llm:
+  # 选择使用哪个 LLM 后端，目前支持 "zhipuai" 和 "openai_compatible"
+  provider: "zhipuai"
+
+  zhipuai:
+    api_key: "ZHIPUAI_API_KEY"   # 后续替换为.env文件读取
+    model: "glm-4.7"              # 额度够
+    temperature: 0.3
+    max_tokens: 1024
+
+neo4j:
+  uri: "NEO4J_URI"               # 后续替换为.env文件
+  user: "neo4j"
+  password: "NEO4J_PASSWORD"     # 后续替换为.env文件
+
+system:
+  max_hops: 2
+  max_triples: 20
+  enable_source: true
