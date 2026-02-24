@@ -66,12 +66,12 @@ class GraphRAGPipeline:
             self.graph_retrieval = MockGraphRetrieval()
         
         替换后（真实实现）：
-            from 组员的模块 import RealQuestionUnderstanding
-            from 组员的模块 import RealGraphRetrieval
+            from 问题理解模块 import RealQuestionUnderstanding
+            from 图谱检索模块 import RealGraphRetrieval
             self.question_understanding = RealQuestionUnderstanding()
             self.graph_retrieval = RealGraphRetrieval()
         
-        要求：组员的类需要实现以下方法签名：
+        要求：对接的类需要实现以下方法签名：
             - parse(question: str) -> ParsedQuestion
             - retrieve(parsed_question: ParsedQuestion) -> RetrievalResult
         =====================================================
