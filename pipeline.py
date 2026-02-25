@@ -31,13 +31,14 @@ sys.path.insert(0, BASE_DIR)
 from data_models import ParsedQuestion, RetrievalResult, FormattedAnswer, Triple
 
 # ---- 导入 Mock 模块（其他部分的替代实现） ----
-from mock_modules import MockQuestionUnderstanding, MockGraphRetrieval
+from mock_modules import MockGraphRetrieval
 
 # ---- 导入已经实现的模块 ----
 from answer_generation.context_builder import ContextBuilder       # answer-generation/
 from answer_generation.prompt_templates import PromptTemplateManager  # answer-generation/
 from answer_generation.answer_formatter import AnswerFormatter      # answer-generation/
 from llm_integration.llm_factory import create_llm               # llm-integration/
+from question_understanding.ner_module import QuestionUnderstanding
 
 class GraphRAGPipeline:
     """
@@ -85,9 +86,10 @@ class GraphRAGPipeline:
         print("=" * 50)
 
         # ---- 模块1: 问题理解（目前用Mock） ----
-        self.question_understanding = MockQuestionUnderstanding()
-        print("[✓] 问题理解模块: Mock（等待对接）")
-
+        #self.question_understanding = MockQuestionUnderstanding()
+        #print("[✓] 问题理解模块: Mock（等待对接）")
+        self.question_understanding = QuestionUnderstanding()
+        print("[✓] 问题理解模块: 已加载")
         # ---- 模块2: 图谱检索（目前用Mock） ----
         self.graph_retrieval = MockGraphRetrieval()
         print("[✓] 图谱检索模块: Mock（等待对接）")
