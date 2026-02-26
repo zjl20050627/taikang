@@ -30,8 +30,8 @@ sys.path.insert(0, BASE_DIR)
 # ---- 导入数据模型 ----
 from data_models import ParsedQuestion, RetrievalResult, FormattedAnswer, Triple
 
-# ---- 导入 Mock 模块（其他部分的替代实现） ----
-from mock_modules import MockGraphRetrieval
+# ---- 导入图谱检索模块 ----
+from graph_retrieval.neo4j_retrieval import Neo4jGraphRetrieval
 
 # ---- 导入已经实现的模块 ----
 from answer_generation.context_builder import ContextBuilder       # answer-generation/
@@ -90,9 +90,9 @@ class GraphRAGPipeline:
         #print("[✓] 问题理解模块: Mock（等待对接）")
         self.question_understanding = QuestionUnderstanding()
         print("[✓] 问题理解模块: 已加载")
-        # ---- 模块2: 图谱检索（目前用Mock） ----
-        self.graph_retrieval = MockGraphRetrieval()
-        print("[✓] 图谱检索模块: Mock（等待对接）")
+        # ---- 模块2: 图谱检索 ----
+        self.graph_retrieval = Neo4jGraphRetrieval()
+        print("[✓] 图谱检索模块: 已加载")
         # ---- 模块3: 上下文构造（已实现） ----
         self.context_builder = ContextBuilder()
         print("[✓] 上下文构造模块: 已加载")
