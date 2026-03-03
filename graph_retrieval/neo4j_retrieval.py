@@ -158,23 +158,18 @@ class Neo4jGraphRetrieval:
         if insurance_entities:
             insurance_name = self._normalize_entity(insurance_entities[0]["text"])
         
-        # 根据意图构建查询
+        # 根据意图构建查询（图中若无 InsuranceProduct，会在 retrieve 里用疾病子图回退）
         if intent == "insurability":
-            # 能否投保意图
             if disease_entities and insurance_entities:
-                # 保险产品与疾病的关系
-                return f"MATCH (p:InsuranceProduct)-[r]-(d:Disease) WHERE d.name = '{disease_name}' AND p.name CONTAINS '{insurance_name}' RETURN p, r, d LIMIT 20"
+                return f"MATCH (p:InsuranceProduct)-[r]-(d:Disease) WHERE d.name CONTAINS '{disease_name}' AND p.name CONTAINS '{insurance_name}' RETURN p, r, d LIMIT 20"
             elif disease_entities:
-                # 所有与疾病相关的保险产品
-                return f"MATCH (p:InsuranceProduct)-[r]-(d:Disease) WHERE d.name = '{disease_name}' RETURN p, r, d LIMIT 20"
+                return f"MATCH (p:InsuranceProduct)-[r]-(d:Disease) WHERE d.name CONTAINS '{disease_name}' RETURN p, r, d LIMIT 20"
             elif insurance_entities:
-                # 保险产品的所有承保疾病
                 return f"MATCH (p:InsuranceProduct)-[r]-(d:Disease) WHERE p.name CONTAINS '{insurance_name}' RETURN p, r, d LIMIT 20"
         elif intent == "treatment":
-            # 治疗意图
+            # 治疗意图（用 CONTAINS 匹配，图中可能是「原发性高血压」等）
             if disease_entities:
-                # 疾病的治疗药物
-                return f"MATCH (d:Disease)-[r:TREATED_BY]->(dr:Drug) WHERE d.name = '{disease_name}' RETURN d, r, dr LIMIT 20"
+                return f"MATCH (d:Disease)-[r:TREATED_BY]->(dr:Drug) WHERE d.name CONTAINS '{disease_name}' OR d.aligned_name = '{disease_name}' RETURN d, r, dr LIMIT 20"
         elif intent == "cost":
             # 费用意图
             if insurance_entities:
@@ -289,6 +284,19 @@ class Neo4jGraphRetrieval:
                 tail = record['c'].get('content', 'Unknown')
                 tail_type = record['c'].get('type', 'Entity')
                 triples.append(Triple(head=head, head_type=head_type, relation=relation, tail=tail, tail_type=tail_type))
+            elif 'd' in record and 'r' in record and 'm' in record and 'dr' not in record:
+                # 疾病-关系-任意节点（回退查询，如 Disease-BELONGS_TO-Category 等）
+                rel = record.get('r')
+                relation = (rel.get('type') if isinstance(rel, dict) else getattr(rel, 'type', None)) or 'RELATED_TO'
+                tail_val = record['m']
+                tail = tail_val.get('name', str(tail_val)) if isinstance(tail_val, dict) else getattr(tail_val, 'name', 'Unknown')
+                triples.append(Triple(
+                    head=record['d'].get('name', 'Unknown'),
+                    head_type='Disease',
+                    relation=relation,
+                    tail=tail,
+                    tail_type='Entity'
+                ))
             elif 'n' in record and 'r' in record and 'm' in record:
                 # 通用关系
                 head = record['n'].get('name', 'Unknown')
@@ -320,9 +328,18 @@ class Neo4jGraphRetrieval:
             
             # 执行查询
             result = self._execute_query(query)
-            
-            # 解析结果为Triple对象
             triples = self._parse_query_result(result)
+            
+            # 若图中没有 InsuranceProduct/Institution 等，主查询会返回 0 条；用疾病相关子图回退
+            if len(triples) == 0 and self.driver:
+                disease_entities = [e for e in parsed_question.entities if e.get("type") == "Disease"]
+                if disease_entities:
+                    disease_name = self._normalize_entity(disease_entities[0]["text"])
+                    fallback_query = f"MATCH (d:Disease)-[r]-(m) WHERE d.name CONTAINS '{disease_name}' OR d.aligned_name = '{disease_name}' RETURN d, r, m LIMIT {self.max_triples}"
+                    fallback_result = self._execute_query(fallback_query)
+                    triples = self._parse_query_result(fallback_result)
+                    if triples:
+                        query = f"[主查询无结果，已用疾病子图回退] {fallback_query}"
             
             # 限制返回的三元组数量
             triples = triples[:self.max_triples]

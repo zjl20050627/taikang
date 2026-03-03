@@ -14,6 +14,6 @@ neo4j:
   password: "12345678"     # 用户提供的密码
 
 system:
-  max_hops: 2
-  max_triples: 20
+  max_hops: 3
+  max_triples: 500
   enable_source: true

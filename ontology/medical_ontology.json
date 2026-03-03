@@ -1,0 +1,118 @@
+{
+  "ontology": {
+    "name": "Medical Knowledge Graph Ontology",
+    "version": "1.0",
+    "description": "本体定义了医疗、保险和养老服务领域的核心实体及其关系",
+    "entities": [
+      {
+        "name": "Disease",
+        "description": "疾病实体",
+        "properties": [
+          {"name": "code", "type": "string", "description": "疾病编码，如ICD-11编码"},
+          {"name": "name", "type": "string", "description": "疾病名称"},
+          {"name": "description", "type": "string", "description": "疾病描述"}
+        ]
+      },
+      {
+        "name": "Drug",
+        "description": "药品实体",
+        "properties": [
+          {"name": "code", "type": "string", "description": "药品编码"},
+          {"name": "name", "type": "string", "description": "药品通用名称"},
+          {"name": "brand_name", "type": "string", "description": "药品商品名称"},
+          {"name": "manufacturer", "type": "string", "description": "药品制造商"},
+          {"name": "validity_period", "type": "string", "description": "有效期"}
+        ]
+      },
+      {
+        "name": "DrugCategory",
+        "description": "药品分类实体",
+        "properties": [
+          {"name": "code", "type": "string", "description": "分类编码"},
+          {"name": "name", "type": "string", "description": "分类名称"}
+        ]
+      },
+      {
+        "name": "DiseaseCategory",
+        "description": "疾病分类实体",
+        "properties": [
+          {"name": "code", "type": "string", "description": "分类编码"},
+          {"name": "name", "type": "string", "description": "分类名称"}
+        ]
+      },
+      {
+        "name": "InsuranceProduct",
+        "description": "保险产品实体",
+        "properties": [
+          {"name": "code", "type": "string", "description": "产品编码"},
+          {"name": "name", "type": "string", "description": "产品名称"},
+          {"name": "description", "type": "string", "description": "产品描述"}
+        ]
+      },
+      {
+        "name": "MedicalService",
+        "description": "医疗服务实体",
+        "properties": [
+          {"name": "code", "type": "string", "description": "服务编码"},
+          {"name": "name", "type": "string", "description": "服务名称"},
+          {"name": "description", "type": "string", "description": "服务描述"}
+        ]
+      },
+      {
+        "name": "AgeLimit",
+        "description": "年龄限制实体",
+        "properties": [
+          {"name": "min_age", "type": "integer", "description": "最小年龄"},
+          {"name": "max_age", "type": "integer", "description": "最大年龄"}
+        ]
+      },
+      {
+        "name": "Institution",
+        "description": "机构实体",
+        "properties": [
+          {"name": "name", "type": "string", "description": "机构名称"},
+          {"name": "type", "type": "string", "description": "机构类型"},
+          {"name": "location", "type": "string", "description": "机构位置"}
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "TREATED_BY",
+        "description": "疾病由药品治疗",
+        "source": "Disease",
+        "target": "Drug"
+      },
+      {
+        "name": "BELONGS_TO",
+        "description": "属于某个分类",
+        "source": ["Disease", "Drug"],
+        "target": ["DiseaseCategory", "DrugCategory"]
+      },
+      {
+        "name": "COVERS",
+        "description": "保险产品承保",
+        "source": "InsuranceProduct",
+        "target": ["Disease", "MedicalService"]
+      },
+      {
+        "name": "INDICATED_FOR",
+        "description": "药品适应症为",
+        "source": "Drug",
+        "target": "Disease"
+      },
+      {
+        "name": "HAS_AGE_LIMIT",
+        "description": "有年龄限制",
+        "source": "InsuranceProduct",
+        "target": "AgeLimit"
+      },
+      {
+        "name": "PROVIDED_BY",
+        "description": "由机构提供",
+        "source": "MedicalService",
+        "target": "Institution"
+      }
+    ]
+  }
+}
