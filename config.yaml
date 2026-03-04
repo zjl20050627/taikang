@@ -9,9 +9,9 @@ llm:
     max_tokens: 4096             # 为思考模型留足空间
 
 neo4j:
-  uri: "bolt://localhost:7687"               # 本地Neo4j实例
+  uri: "bolt://localhost:7689"               # 本地Neo4j实例
   user: "neo4j"
-  password: "12345678"     # 用户提供的密码
+  password: "neo4j123456"     # 用户提供的密码
 
 system:
   max_hops: 3
