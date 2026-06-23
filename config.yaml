@@ -1,17 +1,24 @@
 llm:
-  # 选择使用哪个 LLM 后端，目前支持 "zhipuai" 和 "openai_compatible"
-  provider: "zhipuai"
+  # 可选: deepseek / zhipuai / mock
+  provider: "deepseek"
+
+  deepseek:
+    model: "deepseek-chat"
+    base_url: "https://api.deepseek.com"
+    temperature: 0.3
+    max_tokens: 4096
 
   zhipuai:
-    api_key: "ZHIPUAI_API_KEY"   # 后续替换为.env文件读取
-    model: "glm-4.7"              # 额度够
+    api_key: "ZHIPUAI_API_KEY"
+    model: "glm-4-flash"
     temperature: 0.3
-    max_tokens: 4096             # 为思考模型留足空间
+    max_tokens: 4096
 
 neo4j:
-  uri: "bolt://localhost:7689"               # 本地Neo4j实例
-  user: "neo4j"
-  password: "neo4j123456"     # 用户提供的密码
+  uri: "neo4j+s://48d09440.databases.neo4j.io"
+  user: "48d09440"              # Aura 控制台中的 NEO4J_USERNAME
+  database: "48d09440"          # Aura 控制台中的 NEO4J_DATABASE
+  # password 请写在 .env 的 NEO4J_PASSWORD 中，勿提交到 Git
 
 system:
   max_hops: 3

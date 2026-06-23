@@ -1,0 +1,404 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "description": "保险+医养跨域知识图谱 - 保险产品结构化数据（初稿）",
+    "data_nature": "基于公开产品信息摘要整理的模拟数据，用于课程课题原型验证",
+    "total_products": 10,
+    "last_updated": "2026-06-18",
+    "fields_note": {
+      "aligned_icd": "对齐到医疗域 ICD/aligned_entities 中的标准疾病名",
+      "covers_diseases": "可承保或不在免责范围内的疾病（生成 COVERS 关系）",
+      "excludes_diseases": "责任免除或拒保的疾病（生成 EXCLUDES 关系）"
+    }
+  },
+  "products": [
+    {
+      "id": "insurance_taiping_care",
+      "code": "IP001",
+      "name": "太平养老臻爱一生护理险",
+      "short_name": "太平养老护理险",
+      "type": "长期护理保险",
+      "company": "太平养老保险股份有限公司",
+      "description": "为失能老人提供长期护理费用补偿，覆盖居家护理、机构护理及日间照料场景",
+      "source": "太平养老保险产品说明书（模拟摘要）",
+      "age_limit": { "min_age": 18, "max_age": 75 },
+      "coverage_amount": "最高50万元",
+      "annual_premium": "2000-5000元",
+      "deductible": "年度免赔额1万元",
+      "waiting_period": "90天",
+      "payment_period": "10年/20年/趸交",
+      "coverage_items": [
+        "长期护理费用",
+        "居家护理服务",
+        "养老机构护理",
+        "日间照料补贴"
+      ],
+      "medical_services_covered": [
+        "长期护理服务",
+        "康复护理",
+        "生活照料"
+      ],
+      "covers_diseases": [
+        { "disease": "高血压I级", "aligned_icd": "高血压", "severity": "轻度", "note": "I级高血压可正常承保" },
+        { "disease": "高血压II级", "aligned_icd": "高血压", "severity": "中度", "note": "II级需加费承保" },
+        { "disease": "2型糖尿病", "aligned_icd": "糖尿病", "severity": "控制良好", "note": "血糖控制良好者可承保" },
+        { "disease": "骨质疏松", "aligned_icd": "骨质疏松", "note": "可承保" },
+        { "disease": "关节炎", "aligned_icd": "关节炎", "note": "可承保" }
+      ],
+      "excludes_diseases": [
+        { "disease": "高血压III级", "aligned_icd": "高血压", "note": "III级及以上高血压拒保" },
+        { "disease": "恶性肿瘤", "aligned_icd": "恶性肿瘤", "note": "责任免除" },
+        { "disease": "急性心肌梗死", "aligned_icd": "心肌梗死", "note": "投保前已确诊则除外" },
+        { "disease": "脑卒中", "aligned_icd": "脑梗死", "note": "投保前已确诊则除外" },
+        { "disease": "阿尔茨海默病", "aligned_icd": "阿尔茨海默", "note": "投保前已确诊则除外" },
+        { "disease": "帕金森病", "aligned_icd": "帕金森", "note": "投保前已确诊则除外" }
+      ]
+    },
+    {
+      "id": "insurance_pingan_care",
+      "code": "IP002",
+      "name": "平安e生长期护理保险",
+      "short_name": "平安护理险",
+      "type": "长期护理保险",
+      "company": "中国平安人寿保险股份有限公司",
+      "description": "针对失能风险提供护理津贴，支持失智、失能双重保障",
+      "source": "平安人寿产品条款（模拟摘要）",
+      "age_limit": { "min_age": 18, "max_age": 65 },
+      "coverage_amount": "最高30万元",
+      "annual_premium": "1500-4000元",
+      "deductible": "无免赔额",
+      "waiting_period": "180天",
+      "payment_period": "10年/15年/20年",
+      "coverage_items": [
+        "护理服务费用",
+        "失能护理津贴",
+        "失智护理津贴",
+        "身故保险金"
+      ],
+      "medical_services_covered": [
+        "失能护理",
+        "认知障碍护理"
+      ],
+      "covers_diseases": [
+        { "disease": "高血压I级", "aligned_icd": "高血压", "note": "可承保" },
+        { "disease": "冠心病", "aligned_icd": "冠心病", "note": "稳定期可承保" },
+        { "disease": "糖尿病", "aligned_icd": "糖尿病", "note": "无并发症可承保" }
+      ],
+      "excludes_diseases": [
+        { "disease": "高血压III级", "aligned_icd": "高血压", "note": "III级高血压除外" },
+        { "disease": "恶性肿瘤", "aligned_icd": "恶性肿瘤", "note": "责任免除" },
+        { "disease": "艾滋病", "aligned_icd": "艾滋病", "note": "责任免除" },
+        { "disease": "精神分裂症", "aligned_icd": "精神分裂症", "note": "精神疾病除外" }
+      ]
+    },
+    {
+      "id": "insurance_taikang_care",
+      "code": "IP003",
+      "name": "泰康长寿考取长期护理保险",
+      "short_name": "泰康长期护理险",
+      "type": "长期护理保险",
+      "company": "泰康人寿保险有限责任公司",
+      "description": "与泰康之家养老社区协同，提供保险+养老一站式服务",
+      "source": "泰康人寿产品说明（模拟摘要）",
+      "age_limit": { "min_age": 40, "max_age": 70 },
+      "coverage_amount": "最高80万元",
+      "annual_premium": "3000-8000元",
+      "deductible": "年度免赔额5000元",
+      "waiting_period": "90天",
+      "payment_period": "5年/10年/至60岁",
+      "coverage_items": [
+        "长期护理保险金",
+        "泰康之家入住权益",
+        "居家护理补贴",
+        "紧急救援服务"
+      ],
+      "medical_services_covered": [
+        "机构养老护理",
+        "医养结合服务",
+        "康复理疗"
+      ],
+      "covers_diseases": [
+        { "disease": "高血压", "aligned_icd": "高血压", "note": "I-II级可承保，III级拒保" },
+        { "disease": "糖尿病", "aligned_icd": "糖尿病", "note": "无严重并发症可承保" },
+        { "disease": "高脂血症", "aligned_icd": "高脂血症", "note": "可承保" }
+      ],
+      "excludes_diseases": [
+        { "disease": "高血压III级", "aligned_icd": "高血压", "note": "III级拒保" },
+        { "disease": "恶性肿瘤", "aligned_icd": "恶性肿瘤", "note": "责任免除" },
+        { "disease": "肾功能衰竭", "aligned_icd": "肾病", "note": "终末期肾病除外" },
+        { "disease": "白血病", "aligned_icd": "白血病", "note": "责任免除" }
+      ]
+    },
+    {
+      "id": "insurance_haoyibao_medical",
+      "code": "IP004",
+      "name": "好医保·长期医疗险",
+      "short_name": "好医保",
+      "type": "百万医疗险",
+      "company": "中国人民健康保险股份有限公司",
+      "description": "保证续保20年的长期医疗险，覆盖住院、门诊手术及特殊门诊",
+      "source": "人保健康产品条款（模拟摘要）",
+      "age_limit": { "min_age": 0, "max_age": 60 },
+      "coverage_amount": "400万元/年",
+      "annual_premium": "200-1500元",
+      "deductible": "年度免赔额1万元",
+      "waiting_period": "90天",
+      "payment_period": "年缴",
+      "coverage_items": [
+        "住院医疗费用",
+        "特殊门诊",
+        "门诊手术",
+        "住院前后门急诊",
+        "质子重离子治疗"
+      ],
+      "medical_services_covered": [
+        "住院医疗服务",
+        "门诊手术",
+        "特殊门诊治疗"
+      ],
+      "covers_diseases": [
+        { "disease": "肺炎", "aligned_icd": "肺炎", "note": "可承保" },
+        { "disease": "阑尾炎", "aligned_icd": "阑尾炎", "note": "可承保" },
+        { "disease": "骨折", "aligned_icd": "骨折", "note": "意外导致可理赔" }
+      ],
+      "excludes_diseases": [
+        { "disease": "糖尿病", "aligned_icd": "糖尿病", "note": "投保前已确诊则除外或加费" },
+        { "disease": "高血压", "aligned_icd": "高血压", "note": "II级及以上需健康告知" },
+        { "disease": "恶性肿瘤", "aligned_icd": "恶性肿瘤", "note": "投保前已确诊拒保" },
+        { "disease": "先天性心脏病", "aligned_icd": "先天性心脏病", "note": "责任免除" },
+        { "disease": "精神病", "aligned_icd": "精神病", "note": "责任免除" }
+      ]
+    },
+    {
+      "id": "insurance_zhongan_medical",
+      "code": "IP005",
+      "name": "尊享e生百万医疗险",
+      "short_name": "百万医疗险",
+      "type": "百万医疗险",
+      "company": "众安在线财产保险股份有限公司",
+      "description": "高保额医疗险，覆盖一般医疗和重大疾病医疗，支持家庭共享免赔额",
+      "source": "众安保险产品条款（模拟摘要）",
+      "age_limit": { "min_age": 30, "max_age": 65 },
+      "coverage_amount": "600万元/年",
+      "annual_premium": "300-2000元",
+      "deductible": "年度免赔额1万元",
+      "waiting_period": "30天",
+      "payment_period": "年缴",
+      "coverage_items": [
+        "一般住院医疗",
+        "重大疾病住院",
+        "恶性肿瘤质子重离子",
+        "海外二次诊疗",
+        "住院垫付服务"
+      ],
+      "medical_services_covered": [
+        "住院医疗服务",
+        "重疾住院",
+        "海外医疗服务"
+      ],
+      "covers_diseases": [
+        { "disease": "霍乱", "aligned_icd": "霍乱", "note": "急性病可理赔" },
+        { "disease": "急性胃炎", "aligned_icd": "胃炎", "note": "可承保" }
+      ],
+      "excludes_diseases": [
+        { "disease": "糖尿病", "aligned_icd": "糖尿病", "note": "投保前已确诊除外" },
+        { "disease": "高血压III级", "aligned_icd": "高血压", "note": "III级拒保" },
+        { "disease": "慢性肾病", "aligned_icd": "肾病", "note": "慢性肾病除外" },
+        { "disease": "肝硬化", "aligned_icd": "肝硬化", "note": "责任免除" },
+        { "disease": "系统性红斑狼疮", "aligned_icd": "系统性红斑狼疮", "note": "自身免疫病除外" }
+      ]
+    },
+    {
+      "id": "insurance_pingan_cancer",
+      "code": "IP006",
+      "name": "平安抗癌卫士防癌险",
+      "short_name": "防癌险",
+      "type": "防癌保险",
+      "company": "中国平安财产保险股份有限公司",
+      "description": "专项保障恶性肿瘤，健康告知宽松，适合慢病患者补充保障",
+      "source": "平安产险产品说明（模拟摘要）",
+      "age_limit": { "min_age": 18, "max_age": 70 },
+      "coverage_amount": "50万元",
+      "annual_premium": "500-3000元",
+      "deductible": "无免赔额",
+      "waiting_period": "180天",
+      "payment_period": "年缴/至65岁",
+      "coverage_items": [
+        "恶性肿瘤保险金",
+        "原位癌保险金",
+        "癌症住院津贴",
+        "癌症手术津贴"
+      ],
+      "medical_services_covered": [
+        "肿瘤治疗",
+        "癌症住院",
+        "放疗化疗"
+      ],
+      "covers_diseases": [
+        { "disease": "糖尿病", "aligned_icd": "糖尿病", "note": "糖尿病患者可投保，恶性肿瘤新发可理赔" },
+        { "disease": "高血压", "aligned_icd": "高血压", "note": "高血压患者可投保" },
+        { "disease": "冠心病", "aligned_icd": "冠心病", "note": "稳定期冠心病可投保" },
+        { "disease": "甲状腺结节", "aligned_icd": "甲状腺结节", "note": "良性结节可承保" }
+      ],
+      "excludes_diseases": [
+        { "disease": "恶性肿瘤", "aligned_icd": "恶性肿瘤", "note": "投保前已确诊恶性肿瘤拒保" },
+        { "disease": "原位癌", "aligned_icd": "原位癌", "note": "投保前已确诊拒保" },
+        { "disease": "艾滋病", "aligned_icd": "艾滋病", "note": "责任免除" }
+      ]
+    },
+    {
+      "id": "insurance_darwin_critical",
+      "code": "IP007",
+      "name": "达尔文8号重大疾病保险",
+      "short_name": "达尔文8号重疾险",
+      "type": "重大疾病保险",
+      "company": "瑞华健康保险股份有限公司",
+      "description": "覆盖110种重大疾病、35种中症、40种轻症，含恶性肿瘤多次赔付",
+      "source": "瑞华健康产品条款（模拟摘要）",
+      "age_limit": { "min_age": 0, "max_age": 55 },
+      "coverage_amount": "10万-50万元",
+      "annual_premium": "3000-15000元",
+      "deductible": "无免赔额",
+      "waiting_period": "180天",
+      "payment_period": "10年/20年/30年/至70岁",
+      "coverage_items": [
+        "重大疾病保险金",
+        "中症疾病保险金",
+        "轻症疾病保险金",
+        "恶性肿瘤多次赔付",
+        "身故/全残保险金"
+      ],
+      "medical_services_covered": [
+        "重疾治疗",
+        "重症监护"
+      ],
+      "covers_diseases": [
+        { "disease": "恶性肿瘤", "aligned_icd": "恶性肿瘤", "note": "等待期后新发可理赔" },
+        { "disease": "急性心肌梗死", "aligned_icd": "心肌梗死", "note": "等待期后新发可理赔" },
+        { "disease": "脑卒中", "aligned_icd": "脑梗死", "note": "等待期后新发可理赔" },
+        { "disease": "终末期肾病", "aligned_icd": "肾病", "note": "等待期后新发可理赔" }
+      ],
+      "excludes_diseases": [
+        { "disease": "投保前已患恶性肿瘤", "aligned_icd": "恶性肿瘤", "note": "投保前已确诊拒保" },
+        { "disease": "投保前已患心肌梗死", "aligned_icd": "心肌梗死", "note": "投保前已确诊拒保" },
+        { "disease": "先天性畸形", "aligned_icd": "先天性畸形", "note": "责任免除" }
+      ]
+    },
+    {
+      "id": "insurance_cpic_golden",
+      "code": "IP008",
+      "name": "太保金佑人生终身寿险（附加重疾）",
+      "short_name": "金佑人生",
+      "type": "重大疾病保险",
+      "company": "中国太平洋人寿保险股份有限公司",
+      "description": "终身寿险附加重疾保障，身故+重疾双重保障，保额逐年递增",
+      "source": "太平洋保险条款（模拟摘要）",
+      "age_limit": { "min_age": 18, "max_age": 50 },
+      "coverage_amount": "20万-80万元",
+      "annual_premium": "5000-20000元",
+      "deductible": "无免赔额",
+      "waiting_period": "180天",
+      "payment_period": "10年/15年/20年",
+      "coverage_items": [
+        "身故保险金",
+        "全残保险金",
+        "88种重大疾病",
+        "20种特定疾病",
+        "保费豁免"
+      ],
+      "medical_services_covered": [
+        "重疾治疗",
+        "身故保障"
+      ],
+      "covers_diseases": [
+        { "disease": "恶性肿瘤", "aligned_icd": "恶性肿瘤", "note": "等待期后新发可理赔" },
+        { "disease": "重大器官移植", "aligned_icd": "器官移植", "note": "可理赔" },
+        { "disease": "瘫痪", "aligned_icd": "瘫痪", "note": "可理赔" }
+      ],
+      "excludes_diseases": [
+        { "disease": "投保前已患重疾", "aligned_icd": "恶性肿瘤", "note": "投保前已确诊拒保" },
+        { "disease": "故意自伤", "aligned_icd": null, "note": "责任免除（非疾病）" },
+        { "disease": "吸毒", "aligned_icd": null, "note": "责任免除（非疾病）" }
+      ]
+    },
+    {
+      "id": "insurance_zhongan_elderly_accident",
+      "code": "IP009",
+      "name": "众安中老年意外险（尊享版）",
+      "short_name": "中老年意外险",
+      "type": "意外伤害保险",
+      "company": "众安在线财产保险股份有限公司",
+      "description": "专为中老年人设计，含意外医疗、意外住院津贴及救护车费用",
+      "source": "众安保险产品说明（模拟摘要）",
+      "age_limit": { "min_age": 50, "max_age": 80 },
+      "coverage_amount": "20万元意外身故+2万意外医疗",
+      "annual_premium": "200-800元",
+      "deductible": "意外医疗免赔额100元",
+      "waiting_period": "无等待期",
+      "payment_period": "年缴",
+      "coverage_items": [
+        "意外身故/伤残",
+        "意外医疗费用",
+        "意外住院津贴",
+        "救护车费用",
+        "骨折津贴"
+      ],
+      "medical_services_covered": [
+        "意外医疗",
+        "紧急救护",
+        "住院津贴"
+      ],
+      "covers_diseases": [
+        { "disease": "高血压", "aligned_icd": "高血压", "note": "意外事故可理赔，疾病本身不赔" },
+        { "disease": "糖尿病", "aligned_icd": "糖尿病", "note": "意外事故可理赔" },
+        { "disease": "骨折", "aligned_icd": "骨折", "note": "意外导致骨折可理赔" }
+      ],
+      "excludes_diseases": [
+        { "disease": "疾病导致的身故", "aligned_icd": null, "note": "仅保障意外，疾病身故不赔" },
+        { "disease": "猝死", "aligned_icd": "猝死", "note": "部分计划除外猝死" },
+        { "disease": "高风险运动伤害", "aligned_icd": null, "note": "责任免除" }
+      ]
+    },
+    {
+      "id": "insurance_taikang_annuity_care",
+      "code": "IP010",
+      "name": "泰康百岁人生养老年金险（附加长期护理）",
+      "short_name": "百岁人生年金险",
+      "type": "养老年金保险",
+      "company": "泰康人寿保险有限责任公司",
+      "description": "养老年金+长期护理双重保障，满期领取养老金，失能时触发护理金",
+      "source": "泰康人寿产品说明（模拟摘要）",
+      "age_limit": { "min_age": 28, "max_age": 65 },
+      "coverage_amount": "年金+护理金合计最高100万元",
+      "annual_premium": "5000-30000元",
+      "deductible": "无免赔额",
+      "waiting_period": "90天",
+      "payment_period": "3年/5年/10年/至60岁",
+      "coverage_items": [
+        "养老年金",
+        "长期护理保险金",
+        "身故保险金",
+        "保单贷款",
+        "泰康之家优先入住"
+      ],
+      "medical_services_covered": [
+        "养老服务",
+        "长期护理",
+        "机构养老"
+      ],
+      "covers_diseases": [
+        { "disease": "高血压I级", "aligned_icd": "高血压", "note": "可承保" },
+        { "disease": "高血压II级", "aligned_icd": "高血压", "note": "加费承保" },
+        { "disease": "2型糖尿病", "aligned_icd": "糖尿病", "note": "控制良好可承保" },
+        { "disease": "骨质疏松", "aligned_icd": "骨质疏松", "note": "可承保" }
+      ],
+      "excludes_diseases": [
+        { "disease": "高血压III级", "aligned_icd": "高血压", "note": "III级拒保" },
+        { "disease": "恶性肿瘤", "aligned_icd": "恶性肿瘤", "note": "投保前已确诊拒保" },
+        { "disease": "阿尔茨海默病", "aligned_icd": "阿尔茨海默", "note": "投保前已确诊拒保" },
+        { "disease": "帕金森病", "aligned_icd": "帕金森", "note": "投保前已确诊拒保" },
+        { "disease": "肾功能衰竭", "aligned_icd": "肾病", "note": "终末期肾病拒保" }
+      ]
+    }
+  ]
+}

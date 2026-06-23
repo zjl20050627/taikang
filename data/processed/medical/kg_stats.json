@@ -1,0 +1,28 @@
+{
+  "total_triples": 8986,
+  "entities": {
+    "diseases": 5067,
+    "drugs": 14,
+    "categories": 214,
+    "insurance_products": 10,
+    "institutions": 20,
+    "age_limits": 10,
+    "medical_services": 28,
+    "value_nodes": 96
+  },
+  "relations_by_type": {
+    "BELONGS_TO": 5058,
+    "INDICATED_FOR": 32,
+    "TREATED_BY": 32,
+    "ALIGNED_WITH": 3637,
+    "HAS_AGE_LIMIT": 10,
+    "PRICE": 10,
+    "COVERAGE": 46,
+    "COVERS": 61,
+    "EXCLUDES": 37,
+    "PARTNER_WITH": 6,
+    "PROVIDES": 17,
+    "CHARGE": 20,
+    "ADMISSION": 20
+  }
+}

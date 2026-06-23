@@ -79,7 +79,7 @@ def main():
             "### 关于系统\n"
             "- **架构**: GraphRAG\n"
             "- **图谱**: Neo4j Aura\n"
-            "- **大模型**: 智谱AI GLM\n"
+            "- **大模型**: DeepSeek API\n"
             "- **框架**: Streamlit\n"
         )
 

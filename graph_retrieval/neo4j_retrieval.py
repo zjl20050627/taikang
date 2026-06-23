@@ -21,7 +21,62 @@ except ImportError:
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, BASE_DIR)
 
+from dotenv import load_dotenv
+
+# 加载 .env（图谱检索模块独立启动时也需要）
+load_dotenv(os.path.join(BASE_DIR, ".env"))
+
 from data_models import Triple, ParsedQuestion, RetrievalResult
+from storage.neo4j_settings import get_neo4j_settings
+
+
+def _as_node_dict(node) -> Dict:
+    """将 Neo4j 节点（dict / Node / 元组）统一为属性字典。"""
+    if node is None:
+        return {}
+    if isinstance(node, dict):
+        return node
+    if isinstance(node, tuple) and node:
+        return _as_node_dict(node[0])
+    if hasattr(node, "_properties"):
+        return dict(node._properties)
+    if hasattr(node, "items"):
+        return dict(node)
+    return {}
+
+
+def _node_name(node, default: str = "Unknown") -> str:
+    props = _as_node_dict(node)
+    return props.get("name") or props.get("label") or props.get("id") or default
+
+
+def _node_label(node, default: str = "Entity") -> str:
+    props = _as_node_dict(node)
+    if props.get("type"):
+        return props["type"]
+    if hasattr(node, "labels") and node.labels:
+        return list(node.labels)[0]
+    return default
+
+
+def _relation_type(rel, default: str = "RELATED_TO") -> str:
+    """
+    解析关系类型。
+    多关系 Cypher（如 :COVERS|EXCLUDES）时，Neo4j 可能返回 (起点, 类型, 终点) 元组。
+    """
+    if rel is None:
+        return default
+    if isinstance(rel, str):
+        return rel
+    if isinstance(rel, dict):
+        return rel.get("type", default)
+    if isinstance(rel, tuple):
+        if len(rel) >= 2 and isinstance(rel[1], str):
+            return rel[1]
+        if len(rel) >= 2:
+            return _relation_type(rel[1], default)
+    return getattr(rel, "type", default) or default
+
 
 class Neo4jGraphRetrieval:
     """
@@ -45,7 +100,9 @@ class Neo4jGraphRetrieval:
         self.max_hops = self.config.get("system", {}).get("max_hops", 2)
         self.max_triples = self.config.get("system", {}).get("max_triples", 20)
         
-        # 连接Neo4j
+        # 连接 Neo4j
+        self.neo4j_settings = get_neo4j_settings()
+        self.database = self.neo4j_settings["database"]
         self.driver = self._connect_neo4j()
         
         # 初始化实体对齐映射
@@ -76,18 +133,17 @@ class Neo4jGraphRetrieval:
             return None
         
         try:
-            neo4j_config = self.config.get("neo4j", {})
-            uri = neo4j_config.get("uri", "bolt://localhost:7687")
-            user = neo4j_config.get("user", "neo4j")
-            password = neo4j_config.get("password", "password")
-            
+            settings = self.neo4j_settings
+            uri = settings["uri"]
+            user = settings["user"]
+            password = settings["password"]
+
             driver = GraphDatabase.driver(uri, auth=basic_auth(user, password))
-            
-            # 测试连接
-            with driver.session() as session:
-                session.run("MATCH (n) RETURN count(n) LIMIT 1")
-            
-            print(f"[OK] 成功连接到Neo4j: {uri}")
+
+            with driver.session(database=self.database) as session:
+                session.run("RETURN 1")
+
+            print(f"[OK] 成功连接到Neo4j: {uri} (db={self.database})")
             return driver
         except Exception as e:
             print(f"警告: 连接Neo4j失败: {e}")
@@ -158,33 +214,56 @@ class Neo4jGraphRetrieval:
         if insurance_entities:
             insurance_name = self._normalize_entity(insurance_entities[0]["text"])
         
-        # 根据意图构建查询（图中若无 InsuranceProduct，会在 retrieve 里用疾病子图回退）
+        # insurability 在 retrieve() 中拆成多条 Cypher（疾病承保 + 年龄限制）
         if intent == "insurability":
-            if disease_entities and insurance_entities:
-                return f"MATCH (p:InsuranceProduct)-[r]-(d:Disease) WHERE d.name CONTAINS '{disease_name}' AND p.name CONTAINS '{insurance_name}' RETURN p, r, d LIMIT 20"
-            elif disease_entities:
-                return f"MATCH (p:InsuranceProduct)-[r]-(d:Disease) WHERE d.name CONTAINS '{disease_name}' RETURN p, r, d LIMIT 20"
-            elif insurance_entities:
-                return f"MATCH (p:InsuranceProduct)-[r]-(d:Disease) WHERE p.name CONTAINS '{insurance_name}' RETURN p, r, d LIMIT 20"
+            queries = self._build_insurability_queries(parsed_question)
+            return queries[0] if queries else "MATCH (n)-[r]-(m) RETURN n, r, m LIMIT 10"
         elif intent == "treatment":
             # 治疗意图（用 CONTAINS 匹配，图中可能是「原发性高血压」等）
             if disease_entities:
                 return f"MATCH (d:Disease)-[r:TREATED_BY]->(dr:Drug) WHERE d.name CONTAINS '{disease_name}' OR d.aligned_name = '{disease_name}' RETURN d, r, dr LIMIT 20"
         elif intent == "cost":
-            # 费用意图
+            institution_entities = [e for e in entities if e["type"] == "Institution"]
+            if institution_entities:
+                inst_name = self._normalize_entity(institution_entities[0]["text"])
+                return (
+                    f"MATCH (i:Institution)-[r:CHARGE]->(pr:Price) "
+                    f"WHERE i.name CONTAINS '{inst_name}' RETURN i, r, pr LIMIT 20"
+                )
             if insurance_entities:
-                # 保险产品的价格
-                return f"MATCH (p:InsuranceProduct)-[r:PRICE]->(pr:Price) WHERE p.name CONTAINS '{insurance_name}' RETURN p, r, pr LIMIT 20"
+                return (
+                    f"MATCH (p:InsuranceProduct)-[r:PRICE]->(pr:Price) "
+                    f"WHERE p.name CONTAINS '{insurance_name}' OR p.short_name CONTAINS '{insurance_name}' "
+                    f"RETURN p, r, pr LIMIT 20"
+                )
         elif intent == "coverage":
-            # 保障范围意图
             if insurance_entities:
-                # 保险产品的保障内容
-                return f"MATCH (p:InsuranceProduct)-[r:COVERAGE]->(c:Coverage) WHERE p.name CONTAINS '{insurance_name}' RETURN p, r, c LIMIT 20"
+                return (
+                    f"MATCH (p:InsuranceProduct)-[r:COVERAGE|COVERS]->(c) "
+                    f"WHERE (p.name CONTAINS '{insurance_name}' OR p.short_name CONTAINS '{insurance_name}') "
+                    f"RETURN p, r, c LIMIT 20"
+                )
+            institution_entities = [e for e in entities if e["type"] == "Institution"]
+            if institution_entities:
+                inst_name = self._normalize_entity(institution_entities[0]["text"])
+                return (
+                    f"MATCH (i:Institution)-[r:PROVIDES]->(s:MedicalService) "
+                    f"WHERE i.name CONTAINS '{inst_name}' RETURN i, r, s LIMIT 20"
+                )
         elif intent == "eligibility":
-            # 资格条件意图
             if insurance_entities:
-                # 保险产品的年龄限制
-                return f"MATCH (p:InsuranceProduct)-[r:AGE_LIMIT]->(al:AgeLimit) WHERE p.name CONTAINS '{insurance_name}' RETURN p, r, al LIMIT 20"
+                return (
+                    f"MATCH (p:InsuranceProduct)-[r:HAS_AGE_LIMIT]->(al:AgeLimit) "
+                    f"WHERE p.name CONTAINS '{insurance_name}' OR p.short_name CONTAINS '{insurance_name}' "
+                    f"RETURN p, r, al LIMIT 20"
+                )
+            institution_entities = [e for e in entities if e["type"] == "Institution"]
+            if institution_entities:
+                inst_name = self._normalize_entity(institution_entities[0]["text"])
+                return (
+                    f"MATCH (i:Institution)-[r:ADMISSION]->(a:AdmissionRequirement) "
+                    f"WHERE i.name CONTAINS '{inst_name}' RETURN i, r, a LIMIT 20"
+                )
         
         # 默认查询：基于所有实体的1-2跳关系
         if entities:
@@ -198,6 +277,70 @@ class Neo4jGraphRetrieval:
         
         # 兜底查询
         return "MATCH (n)-[r]-(m) RETURN n, r, m LIMIT 10"
+
+    def _build_insurability_queries(self, parsed_question: ParsedQuestion) -> List[str]:
+        """投保可行性检索：承保/除外关系与年龄限制分查（HAS_AGE_LIMIT 指向 AgeLimit 而非 Disease）。"""
+        entities = parsed_question.entities
+        disease_entities = [e for e in entities if e.get("type") == "Disease"]
+        insurance_entities = [e for e in entities if e.get("type") == "InsuranceProduct"]
+
+        disease_name = None
+        if disease_entities:
+            disease_name = self._normalize_entity(disease_entities[0]["text"])
+
+        product_clauses = []
+        if insurance_entities:
+            raw_product = insurance_entities[0]["text"]
+            insurance_name = self._normalize_entity(raw_product)
+            product_clauses.append(
+                f"(p.name CONTAINS '{insurance_name}' OR p.short_name CONTAINS '{insurance_name}')"
+            )
+            if "护理" in raw_product or "护理" in insurance_name:
+                product_clauses.append(
+                    "(p.name CONTAINS '护理' OR p.short_name CONTAINS '护理' OR p.type CONTAINS '护理')"
+                )
+
+        product_filter = " OR ".join(product_clauses) if product_clauses else None
+        disease_filter = None
+        if disease_name:
+            disease_filter = (
+                f"(d.aligned_name CONTAINS '{disease_name}' OR d.name CONTAINS '{disease_name}')"
+            )
+
+        queries: List[str] = []
+
+        if disease_filter:
+            coverage_where = disease_filter
+            if product_filter:
+                coverage_where += f" AND ({product_filter})"
+            queries.append(
+                "MATCH (p:InsuranceProduct)-[r:COVERS|EXCLUDES]->(d:Disease) "
+                f"WHERE {coverage_where} RETURN p, r, d LIMIT 20"
+            )
+        elif product_filter:
+            queries.append(
+                "MATCH (p:InsuranceProduct)-[r:COVERS|EXCLUDES]->(d:Disease) "
+                f"WHERE {product_filter} RETURN p, r, d LIMIT 20"
+            )
+
+        if product_filter:
+            queries.append(
+                "MATCH (p:InsuranceProduct)-[r:HAS_AGE_LIMIT]->(al:AgeLimit) "
+                f"WHERE {product_filter} RETURN p, r, al LIMIT 20"
+            )
+        elif disease_filter:
+            queries.append(
+                "MATCH (p:InsuranceProduct)-[r:HAS_AGE_LIMIT]->(al:AgeLimit) "
+                f"WHERE EXISTS {{ MATCH (p)-[:COVERS|EXCLUDES]->(d:Disease) WHERE {disease_filter} }} "
+                "RETURN p, r, al LIMIT 20"
+            )
+
+        if not queries:
+            queries.append(
+                "MATCH (p:InsuranceProduct)-[r:COVERS|EXCLUDES]->(d:Disease) "
+                "RETURN p, r, d LIMIT 10"
+            )
+        return queries
     
     def _execute_query(self, query: str, parameters: Dict = None) -> List[Dict]:
         """执行Cypher查询"""
@@ -206,7 +349,7 @@ class Neo4jGraphRetrieval:
             return self._get_mock_data()
         
         try:
-            with self.driver.session() as session:
+            with self.driver.session(database=self.database) as session:
                 result = session.run(query, parameters or {})
                 return [record.data() for record in result]
         except Exception as e:
@@ -247,65 +390,52 @@ class Neo4jGraphRetrieval:
         return mock_data
     
     def _parse_query_result(self, result: List[Dict]) -> List[Triple]:
-        """解析查询结果为Triple对象"""
+        """解析查询结果为 Triple 对象（兼容 dict / Node / Relationship / tuple）。"""
         triples = []
-        
+
+        def add(head_node, tail_node, rel, head_type="Entity", tail_type="Entity", tail_text=None):
+            relation = _relation_type(rel)
+            tail = tail_text if tail_text is not None else _node_name(tail_node)
+            triples.append(Triple(
+                head=_node_name(head_node),
+                head_type=head_type or _node_label(head_node),
+                relation=relation,
+                tail=tail,
+                tail_type=tail_type or _node_label(tail_node),
+            ))
+
         for record in result:
-            # 提取节点和关系
-            if 'd' in record and 'r' in record and 'dr' in record:
-                # 疾病-药物关系
-                head = record['d'].get('name', 'Unknown')
-                head_type = record['d'].get('type', 'Entity')
-                relation = record['r'].get('type', 'RELATED_TO')
-                tail = record['dr'].get('name', 'Unknown')
-                tail_type = record['dr'].get('type', 'Entity')
-                triples.append(Triple(head=head, head_type=head_type, relation=relation, tail=tail, tail_type=tail_type))
-            elif 'p' in record and 'r' in record and 'd' in record:
-                # 保险产品-疾病关系
-                head = record['p'].get('name', 'Unknown')
-                head_type = record['p'].get('type', 'Entity')
-                relation = record['r'].get('type', 'RELATED_TO')
-                tail = record['d'].get('name', 'Unknown')
-                tail_type = record['d'].get('type', 'Entity')
-                triples.append(Triple(head=head, head_type=head_type, relation=relation, tail=tail, tail_type=tail_type))
-            elif 'p' in record and 'r' in record and 'al' in record:
-                # 保险产品-年龄限制关系
-                head = record['p'].get('name', 'Unknown')
-                head_type = record['p'].get('type', 'Entity')
-                relation = record['r'].get('type', 'RELATED_TO')
-                tail = f"{record['al'].get('min_age', 0)}-{record['al'].get('max_age', 100)}岁"
-                tail_type = record['al'].get('type', 'Entity')
-                triples.append(Triple(head=head, head_type=head_type, relation=relation, tail=tail, tail_type=tail_type))
-            elif 'p' in record and 'r' in record and 'c' in record:
-                # 保险产品-保障内容关系
-                head = record['p'].get('name', 'Unknown')
-                head_type = record['p'].get('type', 'Entity')
-                relation = record['r'].get('type', 'RELATED_TO')
-                tail = record['c'].get('content', 'Unknown')
-                tail_type = record['c'].get('type', 'Entity')
-                triples.append(Triple(head=head, head_type=head_type, relation=relation, tail=tail, tail_type=tail_type))
-            elif 'd' in record and 'r' in record and 'm' in record and 'dr' not in record:
-                # 疾病-关系-任意节点（回退查询，如 Disease-BELONGS_TO-Category 等）
-                rel = record.get('r')
-                relation = (rel.get('type') if isinstance(rel, dict) else getattr(rel, 'type', None)) or 'RELATED_TO'
-                tail_val = record['m']
-                tail = tail_val.get('name', str(tail_val)) if isinstance(tail_val, dict) else getattr(tail_val, 'name', 'Unknown')
-                triples.append(Triple(
-                    head=record['d'].get('name', 'Unknown'),
-                    head_type='Disease',
-                    relation=relation,
-                    tail=tail,
-                    tail_type='Entity'
-                ))
-            elif 'n' in record and 'r' in record and 'm' in record:
-                # 通用关系
-                head = record['n'].get('name', 'Unknown')
-                head_type = record['n'].get('type', 'Entity')
-                relation = record['r'].get('type', 'RELATED_TO')
-                tail = record['m'].get('name', 'Unknown')
-                tail_type = record['m'].get('type', 'Entity')
-                triples.append(Triple(head=head, head_type=head_type, relation=relation, tail=tail, tail_type=tail_type))
-        
+            if "d" in record and "r" in record and "dr" in record:
+                add(record["d"], record["dr"], record["r"], "Disease", "Drug")
+            elif "p" in record and "r" in record and "d" in record:
+                add(record["p"], record["d"], record["r"], "InsuranceProduct", "Disease")
+            elif "p" in record and "r" in record and "al" in record:
+                al = _as_node_dict(record["al"])
+                age_text = al.get("label") or f"{al.get('min_age', 0)}-{al.get('max_age', 100)}岁"
+                add(record["p"], record["al"], record["r"], "InsuranceProduct", "AgeLimit", age_text)
+            elif "p" in record and "r" in record and "c" in record:
+                c = _as_node_dict(record["c"])
+                tail = c.get("label") or c.get("content") or c.get("name") or c.get("value", "Unknown")
+                add(record["p"], record["c"], record["r"], "InsuranceProduct", "Coverage", tail)
+            elif "p" in record and "r" in record and "pr" in record:
+                pr = _as_node_dict(record["pr"])
+                tail = pr.get("label") or pr.get("value") or pr.get("amount", "Unknown")
+                add(record["p"], record["pr"], record["r"], "InsuranceProduct", "Price", tail)
+            elif "i" in record and "r" in record and "pr" in record:
+                pr = _as_node_dict(record["pr"])
+                tail = pr.get("label") or pr.get("value", "Unknown")
+                add(record["i"], record["pr"], record["r"], "Institution", "Price", tail)
+            elif "i" in record and "r" in record and "s" in record:
+                add(record["i"], record["s"], record["r"], "Institution", "MedicalService")
+            elif "i" in record and "r" in record and "a" in record:
+                a = _as_node_dict(record["a"])
+                tail = a.get("label") or a.get("value") or a.get("requirements", "Unknown")
+                add(record["i"], record["a"], record["r"], "Institution", "AdmissionRequirement", tail)
+            elif "d" in record and "r" in record and "m" in record and "dr" not in record:
+                add(record["d"], record["m"], record["r"], "Disease", "Entity")
+            elif "n" in record and "r" in record and "m" in record:
+                add(record["n"], record["m"], record["r"])
+
         return triples
     
     def retrieve(self, parsed_question: ParsedQuestion, max_hops: int = None) -> RetrievalResult:
@@ -323,12 +453,27 @@ class Neo4jGraphRetrieval:
             # 使用配置中的max_hops或传入的值
             hop_count = max_hops if max_hops is not None else self.max_hops
             
-            # 构建Cypher查询
-            query = self._build_cypher_query(parsed_question, hop_count)
-            
-            # 执行查询
-            result = self._execute_query(query)
+            # 投保可行性：分多条 Cypher 检索（疾病关系 + 年龄限制）
+            if parsed_question.intent == "insurability":
+                queries = self._build_insurability_queries(parsed_question)
+                result = []
+                for q in queries:
+                    result.extend(self._execute_query(q))
+                query = " | ".join(queries)
+            else:
+                query = self._build_cypher_query(parsed_question, hop_count)
+                result = self._execute_query(query)
+
             triples = self._parse_query_result(result)
+            # 去重
+            seen = set()
+            deduped = []
+            for t in triples:
+                key = (t.head, t.relation, t.tail)
+                if key not in seen:
+                    seen.add(key)
+                    deduped.append(t)
+            triples = deduped
             
             # 若图中没有 InsuranceProduct/Institution 等，主查询会返回 0 条；用疾病相关子图回退
             if len(triples) == 0 and self.driver:

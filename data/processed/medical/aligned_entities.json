@@ -1,15 +1,6 @@
 {
   "diseases": [
     {
-      "id": "disease_章节或编码",
-      "code": "章节或编码",
-      "name": "中文名称",
-      "normalized_name": "中文名称",
-      "aligned_name": "中文名称",
-      "category": "",
-      "chapter": ""
-    },
-    {
       "id": "disease_1A00",
       "code": "1A00",
       "name": "霍乱",
@@ -1603,24 +1594,6 @@
       "chapter": "某些感染性疾病或寄生虫病"
     },
     {
-      "id": "disease_1B20.20",
-      "code": "1B20.20",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "结核病",
-      "chapter": "某些感染性疾病或寄生虫病"
-    },
-    {
-      "id": "disease_1B20.21",
-      "code": "1B20.21",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "结核病",
-      "chapter": "某些感染性疾病或寄生虫病"
-    },
-    {
       "id": "disease_1B20.3",
       "code": "1B20.3",
       "name": "麻风病并发症",
@@ -2602,15 +2575,6 @@
       "chapter": "某些感染性疾病或寄生虫病"
     },
     {
-      "id": "disease_1C11.0",
-      "code": "1C11.0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "其他细菌性疾病",
-      "chapter": "某些感染性疾病或寄生虫病"
-    },
-    {
       "id": "disease_1C11.00",
       "code": "1C11.00",
       "name": "奥罗亚热",
@@ -3462,15 +3426,6 @@
       "name": "立克次体痘",
       "normalized_name": "立克次体痘",
       "aligned_name": "立克次体痘",
-      "category": "立克次体病",
-      "chapter": "某些感染性疾病或寄生虫病"
-    },
-    {
-      "id": "disease_1C33",
-      "code": "1C33",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "立克次体病",
       "chapter": "某些感染性疾病或寄生虫病"
     },
@@ -4564,24 +4519,6 @@
       "chapter": "某些感染性疾病或寄生虫病"
     },
     {
-      "id": "disease_1D42",
-      "code": "1D42",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "某些节肢动物媒介的病毒性发热",
-      "chapter": "某些感染性疾病或寄生虫病"
-    },
-    {
-      "id": "disease_1D43",
-      "code": "1D43",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "某些节肢动物媒介的病毒性发热",
-      "chapter": "某些感染性疾病或寄生虫病"
-    },
-    {
       "id": "disease_1D44",
       "code": "1D44",
       "name": "裂谷热",
@@ -5037,15 +4974,6 @@
       "name": "传染性单核细胞增多症",
       "normalized_name": "传染性单核细胞增多症",
       "aligned_name": "传染性单核细胞增多症",
-      "category": "某些其他的病毒病",
-      "chapter": "某些感染性疾病或寄生虫病"
-    },
-    {
-      "id": "disease_1D81.0",
-      "code": "1D81.0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "某些其他的病毒病",
       "chapter": "某些感染性疾病或寄生虫病"
     },
@@ -8461,15 +8389,6 @@
       "chapter": "某些感染性疾病或寄生虫病"
     },
     {
-      "id": "disease_1G03",
-      "code": "1G03",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "体表寄生虫侵染",
-      "chapter": "某些感染性疾病或寄生虫病"
-    },
-    {
       "id": "disease_1G04",
       "code": "1G04",
       "name": "疥疮",
@@ -9127,15 +9046,6 @@
       "chapter": "肿瘤"
     },
     {
-      "id": "disease_2A20.03",
-      "code": "2A20.03",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "骨髓增殖性肿瘤",
-      "chapter": "肿瘤"
-    },
-    {
       "id": "disease_2A20.0Y",
       "code": "2A20.0Y",
       "name": "其他特指的慢性髓细胞性白血病",
@@ -9523,15 +9433,6 @@
       "chapter": "肿瘤"
     },
     {
-      "id": "disease_2A51",
-      "code": "2A51",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "髓样和淋巴样肿瘤伴嗜酸粒细胞增多和",
-      "chapter": "肿瘤"
-    },
-    {
       "id": "disease_2A52",
       "code": "2A52",
       "name": "髓样或淋巴样肿瘤伴",
@@ -9820,24 +9721,6 @@
       "chapter": "肿瘤"
     },
     {
-      "id": "disease_2A70.0",
-      "code": "2A70.0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "前体淋巴细胞肿瘤",
-      "chapter": "肿瘤"
-    },
-    {
-      "id": "disease_2A70.1",
-      "code": "2A70.1",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "前体淋巴细胞肿瘤",
-      "chapter": "肿瘤"
-    },
-    {
       "id": "disease_2A70.Y",
       "code": "2A70.Y",
       "name": "其他",
@@ -10027,15 +9910,6 @@
       "chapter": "肿瘤"
     },
     {
-      "id": "disease_2A81.8",
-      "code": "2A81.8",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "成熟",
-      "chapter": "肿瘤"
-    },
-    {
       "id": "disease_2A81.9",
       "code": "2A81.9",
       "name": "原发渗出性淋巴瘤",
@@ -10117,38 +9991,11 @@
       "chapter": "肿瘤"
     },
     {
-      "id": "disease_2A82.1",
-      "code": "2A82.1",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "成熟",
-      "chapter": "肿瘤"
-    },
-    {
-      "id": "disease_2A82.10",
-      "code": "2A82.10",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "成熟",
-      "chapter": "肿瘤"
-    },
-    {
       "id": "disease_2A82.1Y",
       "code": "2A82.1Y",
       "name": "其他特指的",
       "normalized_name": "其他特指的",
       "aligned_name": "其他特指的",
-      "category": "成熟",
-      "chapter": "肿瘤"
-    },
-    {
-      "id": "disease_2A82.1Z",
-      "code": "2A82.1Z",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "成熟",
       "chapter": "肿瘤"
     },
@@ -10306,33 +10153,6 @@
       "chapter": "肿瘤"
     },
     {
-      "id": "disease_2A84.0",
-      "code": "2A84.0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "成熟",
-      "chapter": "肿瘤"
-    },
-    {
-      "id": "disease_2A84.1",
-      "code": "2A84.1",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "成熟",
-      "chapter": "肿瘤"
-    },
-    {
-      "id": "disease_2A84.2",
-      "code": "2A84.2",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "成熟",
-      "chapter": "肿瘤"
-    },
-    {
       "id": "disease_2A84.Y",
       "code": "2A84.Y",
       "name": "其他特指的恶性免疫增生性疾病",
@@ -10432,24 +10252,6 @@
       "chapter": "肿瘤"
     },
     {
-      "id": "disease_2A86",
-      "code": "2A86",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "成熟",
-      "chapter": "肿瘤"
-    },
-    {
-      "id": "disease_2A86.0",
-      "code": "2A86.0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "成熟",
-      "chapter": "肿瘤"
-    },
-    {
       "id": "disease_2A86.1",
       "code": "2A86.1",
       "name": "介于伯基特淋巴瘤和弥漫大",
@@ -10477,15 +10279,6 @@
       "chapter": "肿瘤"
     },
     {
-      "id": "disease_2A86.Z",
-      "code": "2A86.Z",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "成熟",
-      "chapter": "肿瘤"
-    },
-    {
       "id": "disease_2A8Z",
       "code": "2A8Z",
       "name": "成熟",
@@ -10500,24 +10293,6 @@
       "name": "成熟",
       "normalized_name": "成熟",
       "aligned_name": "成熟",
-      "category": "成熟",
-      "chapter": "肿瘤"
-    },
-    {
-      "id": "disease_2A90.0",
-      "code": "2A90.0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "成熟",
-      "chapter": "肿瘤"
-    },
-    {
-      "id": "disease_2A90.1",
-      "code": "2A90.1",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "成熟",
       "chapter": "肿瘤"
     },
@@ -10635,15 +10410,6 @@
       "name": "蕈样霉菌病",
       "normalized_name": "蕈样霉菌病",
       "aligned_name": "蕈样霉菌病",
-      "category": "原发皮肤成熟",
-      "chapter": "肿瘤"
-    },
-    {
-      "id": "disease_2B02",
-      "code": "2B02",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "原发皮肤成熟",
       "chapter": "肿瘤"
     },
@@ -12579,15 +12345,6 @@
       "name": "食管腺癌",
       "normalized_name": "食管腺癌",
       "aligned_name": "食管腺癌",
-      "category": "消化器官恶性肿瘤",
-      "chapter": "肿瘤"
-    },
-    {
-      "id": "disease_2B70.00",
-      "code": "2B70.00",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "消化器官恶性肿瘤",
       "chapter": "肿瘤"
     },
@@ -20557,15 +20314,6 @@
       "chapter": "血液或造血器官疾病"
     },
     {
-      "id": "disease_3A20.5",
-      "code": "3A20.5",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "获得性溶血性贫血",
-      "chapter": "血液或造血器官疾病"
-    },
-    {
       "id": "disease_3A20.Y",
       "code": "3A20.Y",
       "name": "其他特指的获得性溶血性贫血",
@@ -20647,15 +20395,6 @@
       "chapter": "血液或造血器官疾病"
     },
     {
-      "id": "disease_3A50.0",
-      "code": "3A50.0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "获得性溶血性贫血",
-      "chapter": "血液或造血器官疾病"
-    },
-    {
       "id": "disease_3A50.00",
       "code": "3A50.00",
       "name": "轻型",
@@ -20697,42 +20436,6 @@
       "name": "其他特指的",
       "normalized_name": "其他特指的",
       "aligned_name": "其他特指的",
-      "category": "获得性溶血性贫血",
-      "chapter": "血液或造血器官疾病"
-    },
-    {
-      "id": "disease_3A50.0Z",
-      "code": "3A50.0Z",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "获得性溶血性贫血",
-      "chapter": "血液或造血器官疾病"
-    },
-    {
-      "id": "disease_3A50.1",
-      "code": "3A50.1",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "获得性溶血性贫血",
-      "chapter": "血液或造血器官疾病"
-    },
-    {
-      "id": "disease_3A50.2",
-      "code": "3A50.2",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "获得性溶血性贫血",
-      "chapter": "血液或造血器官疾病"
-    },
-    {
-      "id": "disease_3A50.3",
-      "code": "3A50.3",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "获得性溶血性贫血",
       "chapter": "血液或造血器官疾病"
     },
@@ -21439,15 +21142,6 @@
       "chapter": "血液或造血器官疾病"
     },
     {
-      "id": "disease_3B12",
-      "code": "3B12",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "先天性或体质性出血性情况",
-      "chapter": "血液或造血器官疾病"
-    },
-    {
       "id": "disease_3B13",
       "code": "3B13",
       "name": "血友病丙",
@@ -21763,15 +21457,6 @@
       "chapter": "血液或造血器官疾病"
     },
     {
-      "id": "disease_3B62.00",
-      "code": "3B62.00",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "纤维蛋白溶解缺陷",
-      "chapter": "血液或造血器官疾病"
-    },
-    {
       "id": "disease_3B62.01",
       "code": "3B62.01",
       "name": "遗传性巨大血小板疾患",
@@ -21822,15 +21507,6 @@
       "name": "致密颗粒病",
       "normalized_name": "致密颗粒病",
       "aligned_name": "致密颗粒病",
-      "category": "纤维蛋白溶解缺陷",
-      "chapter": "血液或造血器官疾病"
-    },
-    {
-      "id": "disease_3B62.4",
-      "code": "3B62.4",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "纤维蛋白溶解缺陷",
       "chapter": "血液或造血器官疾病"
     },
@@ -22519,15 +22195,6 @@
       "chapter": "免疫系统疾病"
     },
     {
-      "id": "disease_4A01.01",
-      "code": "4A01.01",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "原发性免疫缺陷",
-      "chapter": "免疫系统疾病"
-    },
-    {
       "id": "disease_4A01.03",
       "code": "4A01.03",
       "name": "婴儿期短暂性低丙球蛋白血症",
@@ -22578,15 +22245,6 @@
       "name": "严重联合免疫缺陷",
       "normalized_name": "严重联合免疫缺陷",
       "aligned_name": "严重联合免疫缺陷",
-      "category": "原发性免疫缺陷",
-      "chapter": "免疫系统疾病"
-    },
-    {
-      "id": "disease_4A01.11",
-      "code": "4A01.11",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "原发性免疫缺陷",
       "chapter": "免疫系统疾病"
     },
@@ -23068,15 +22726,6 @@
       "chapter": "免疫系统疾病"
     },
     {
-      "id": "disease_4A43.0",
-      "code": "4A43.0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "非器官特异性系统性自身免疫疾病",
-      "chapter": "免疫系统疾病"
-    },
-    {
       "id": "disease_4A43.1",
       "code": "4A43.1",
       "name": "米库利兹病",
@@ -23230,15 +22879,6 @@
       "chapter": "免疫系统疾病"
     },
     {
-      "id": "disease_4A44.6",
-      "code": "4A44.6",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "非器官特异性系统性自身免疫疾病",
-      "chapter": "免疫系统疾病"
-    },
-    {
       "id": "disease_4A44.7",
       "code": "4A44.7",
       "name": "原发性中枢神经系统血管炎",
@@ -23280,15 +22920,6 @@
       "name": "低补体血症荨麻疹性血管炎",
       "normalized_name": "低补体血症荨麻疹性血管炎",
       "aligned_name": "低补体血症荨麻疹性血管炎",
-      "category": "非器官特异性系统性自身免疫疾病",
-      "chapter": "免疫系统疾病"
-    },
-    {
-      "id": "disease_4A44.92",
-      "code": "4A44.92",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "非器官特异性系统性自身免疫疾病",
       "chapter": "免疫系统疾病"
     },
@@ -23352,15 +22983,6 @@
       "name": "其他特指的",
       "normalized_name": "其他特指的",
       "aligned_name": "其他特指的",
-      "category": "非器官特异性系统性自身免疫疾病",
-      "chapter": "免疫系统疾病"
-    },
-    {
-      "id": "disease_4A44.AZ",
-      "code": "4A44.AZ",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "非器官特异性系统性自身免疫疾病",
       "chapter": "免疫系统疾病"
     },
@@ -23518,15 +23140,6 @@
       "chapter": "免疫系统疾病"
     },
     {
-      "id": "disease_4A60.2",
-      "code": "4A60.2",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "自身炎症性疾病",
-      "chapter": "免疫系统疾病"
-    },
-    {
       "id": "disease_4A60.Y",
       "code": "4A60.Y",
       "name": "其他特指的单基因自身炎症综合征",
@@ -23541,15 +23154,6 @@
       "name": "自身炎症综合征",
       "normalized_name": "自身炎症综合征",
       "aligned_name": "自身炎症综合征",
-      "category": "自身炎症性疾病",
-      "chapter": "免疫系统疾病"
-    },
-    {
-      "id": "disease_4A61",
-      "code": "4A61",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "自身炎症性疾病",
       "chapter": "免疫系统疾病"
     },
@@ -24517,15 +24121,6 @@
       "chapter": "免疫系统疾病"
     },
     {
-      "id": "disease_4B40.2",
-      "code": "4B40.2",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "涉及免疫系统的某些疾病",
-      "chapter": "免疫系统疾病"
-    },
-    {
       "id": "disease_4B40.Y",
       "code": "4B40.Y",
       "name": "其他特指的胸腺疾病",
@@ -24594,15 +24189,6 @@
       "name": "永久性先天性甲状腺功能减退症不伴甲状腺肿",
       "normalized_name": "永久性先天性甲状腺功能减退症不伴甲状腺肿",
       "aligned_name": "永久性先天性甲状腺功能减退症不伴甲状腺肿",
-      "category": "甲状腺或甲状腺激素系统疾患",
-      "chapter": "内分泌"
-    },
-    {
-      "id": "disease_5A00.02",
-      "code": "5A00.02",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "甲状腺或甲状腺激素系统疾患",
       "chapter": "内分泌"
     },
@@ -24994,24 +24580,6 @@
       "chapter": "内分泌"
     },
     {
-      "id": "disease_5A10",
-      "code": "5A10",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "糖尿病",
-      "chapter": "内分泌"
-    },
-    {
-      "id": "disease_5A11",
-      "code": "5A11",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "糖尿病",
-      "chapter": "内分泌"
-    },
-    {
       "id": "disease_5A12",
       "code": "5A12",
       "name": "营养不良相关性糖尿病",
@@ -25026,15 +24594,6 @@
       "name": "糖尿病",
       "normalized_name": "糖尿病",
       "aligned_name": "糖尿病",
-      "category": "糖尿病",
-      "chapter": "内分泌"
-    },
-    {
-      "id": "disease_5A13.0",
-      "code": "5A13.0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "糖尿病",
       "chapter": "内分泌"
     },
@@ -25359,15 +24918,6 @@
       "name": "药物性高胃泌素血症",
       "normalized_name": "药物性高胃泌素血症",
       "aligned_name": "药物性高胃泌素血症",
-      "category": "葡萄糖调节或胰腺内分泌的其他疾患",
-      "chapter": "内分泌"
-    },
-    {
-      "id": "disease_5A43.1",
-      "code": "5A43.1",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "葡萄糖调节或胰腺内分泌的其他疾患",
       "chapter": "内分泌"
     },
@@ -25836,15 +25386,6 @@
       "name": "假库欣综合征",
       "normalized_name": "假库欣综合征",
       "aligned_name": "假库欣综合征",
-      "category": "肾上腺或肾上腺激素系统疾患",
-      "chapter": "内分泌"
-    },
-    {
-      "id": "disease_5A70.3",
-      "code": "5A70.3",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "肾上腺或肾上腺激素系统疾患",
       "chapter": "内分泌"
     },
@@ -27487,15 +27028,6 @@
       "chapter": "内分泌"
     },
     {
-      "id": "disease_5C50.5",
-      "code": "5C50.5",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "先天性代谢缺陷",
-      "chapter": "内分泌"
-    },
-    {
       "id": "disease_5C50.6",
       "code": "5C50.6",
       "name": "丝氨酸代谢紊乱",
@@ -27636,15 +27168,6 @@
       "name": "甲硫氨酸循环或硫氨基酸代谢紊乱",
       "normalized_name": "甲硫氨酸循环或硫氨基酸代谢紊乱",
       "aligned_name": "甲硫氨酸循环或硫氨基酸代谢紊乱",
-      "category": "先天性代谢缺陷",
-      "chapter": "内分泌"
-    },
-    {
-      "id": "disease_5C50.C",
-      "code": "5C50.C",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "先天性代谢缺陷",
       "chapter": "内分泌"
     },
@@ -28036,15 +27559,6 @@
       "chapter": "内分泌"
     },
     {
-      "id": "disease_5C52.03",
-      "code": "5C52.03",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "先天性代谢缺陷",
-      "chapter": "内分泌"
-    },
-    {
       "id": "disease_5C52.0Y",
       "code": "5C52.0Y",
       "name": "其他特指的脂肪酸氧化或酮体代谢紊乱",
@@ -28257,15 +27771,6 @@
       "name": "线粒体蛋白质翻译缺陷",
       "normalized_name": "线粒体蛋白质翻译缺陷",
       "aligned_name": "线粒体蛋白质翻译缺陷",
-      "category": "先天性代谢缺陷",
-      "chapter": "内分泌"
-    },
-    {
-      "id": "disease_5C53.24",
-      "code": "5C53.24",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "先天性代谢缺陷",
       "chapter": "内分泌"
     },
@@ -28792,24 +28297,6 @@
       "chapter": "内分泌"
     },
     {
-      "id": "disease_5C58.01",
-      "code": "5C58.01",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "先天性代谢缺陷",
-      "chapter": "内分泌"
-    },
-    {
-      "id": "disease_5C58.02",
-      "code": "5C58.02",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "先天性代谢缺陷",
-      "chapter": "内分泌"
-    },
-    {
       "id": "disease_5C58.03",
       "code": "5C58.03",
       "name": "进行性家族性肝内胆汁淤积",
@@ -28981,15 +28468,6 @@
       "chapter": "内分泌"
     },
     {
-      "id": "disease_5C59.1",
-      "code": "5C59.1",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "先天性代谢缺陷",
-      "chapter": "内分泌"
-    },
-    {
       "id": "disease_5C59.2",
       "code": "5C59.2",
       "name": "吡哆醇代谢紊乱",
@@ -29013,15 +28491,6 @@
       "name": "神经递质代谢紊乱",
       "normalized_name": "神经递质代谢紊乱",
       "aligned_name": "神经递质代谢紊乱",
-      "category": "先天性代谢缺陷",
-      "chapter": "内分泌"
-    },
-    {
-      "id": "disease_5C5A",
-      "code": "5C5A",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "先天性代谢缺陷",
       "chapter": "内分泌"
     },
@@ -29130,15 +28599,6 @@
       "name": "先天性蔗糖酶",
       "normalized_name": "先天性蔗糖酶",
       "aligned_name": "先天性蔗糖酶",
-      "category": "代谢物吸收或运输障碍",
-      "chapter": "内分泌"
-    },
-    {
-      "id": "disease_5C61.3",
-      "code": "5C61.3",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "代谢物吸收或运输障碍",
       "chapter": "内分泌"
     },
@@ -29373,15 +28833,6 @@
       "name": "铜代谢紊乱",
       "normalized_name": "铜代谢紊乱",
       "aligned_name": "铜代谢紊乱",
-      "category": "代谢物吸收或运输障碍",
-      "chapter": "内分泌"
-    },
-    {
-      "id": "disease_5C64.00",
-      "code": "5C64.00",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "代谢物吸收或运输障碍",
       "chapter": "内分泌"
     },
@@ -30012,24 +29463,6 @@
       "name": "淀粉样变性",
       "normalized_name": "淀粉样变性",
       "aligned_name": "淀粉样变性",
-      "category": "其他代谢紊乱",
-      "chapter": "内分泌"
-    },
-    {
-      "id": "disease_5D00.0",
-      "code": "5D00.0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "其他代谢紊乱",
-      "chapter": "内分泌"
-    },
-    {
-      "id": "disease_5D00.1",
-      "code": "5D00.1",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "其他代谢紊乱",
       "chapter": "内分泌"
     },
@@ -35281,150 +34714,6 @@
       "chapter": "精神"
     },
     {
-      "id": "disease_6C4C",
-      "code": "6C4C",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.0",
-      "code": "6C4C.0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.1",
-      "code": "6C4C.1",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.10",
-      "code": "6C4C.10",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.11",
-      "code": "6C4C.11",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.1Z",
-      "code": "6C4C.1Z",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.2",
-      "code": "6C4C.2",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.20",
-      "code": "6C4C.20",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.21",
-      "code": "6C4C.21",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.22",
-      "code": "6C4C.22",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.23",
-      "code": "6C4C.23",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.2Z",
-      "code": "6C4C.2Z",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.3",
-      "code": "6C4C.3",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.4",
-      "code": "6C4C.4",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.5",
-      "code": "6C4C.5",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.6",
-      "code": "6C4C.6",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
       "id": "disease_6C4C.7",
       "code": "6C4C.7",
       "name": "其他",
@@ -35434,38 +34723,11 @@
       "chapter": "精神"
     },
     {
-      "id": "disease_6C4C.70",
-      "code": "6C4C.70",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.71",
-      "code": "6C4C.71",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
       "id": "disease_6C4C.Y",
       "code": "6C4C.Y",
       "name": "其他特指的",
       "normalized_name": "其他特指的",
       "aligned_name": "其他特指的",
-      "category": "物质使用所致障碍",
-      "chapter": "精神"
-    },
-    {
-      "id": "disease_6C4C.Z",
-      "code": "6C4C.Z",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "物质使用所致障碍",
       "chapter": "精神"
     },
@@ -37900,24 +37162,6 @@
       "chapter": "睡眠"
     },
     {
-      "id": "disease_7A20.0",
-      "code": "7A20.0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "过度嗜睡障碍",
-      "chapter": "睡眠"
-    },
-    {
-      "id": "disease_7A20.1",
-      "code": "7A20.1",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "过度嗜睡障碍",
-      "chapter": "睡眠"
-    },
-    {
       "id": "disease_7A20.Z",
       "code": "7A20.Z",
       "name": "发作性睡病",
@@ -37932,15 +37176,6 @@
       "name": "特发性嗜睡症",
       "normalized_name": "特发性嗜睡症",
       "aligned_name": "特发性嗜睡症",
-      "category": "过度嗜睡障碍",
-      "chapter": "睡眠"
-    },
-    {
-      "id": "disease_7A22",
-      "code": "7A22",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "过度嗜睡障碍",
       "chapter": "睡眠"
     },
@@ -38440,24 +37675,6 @@
       "chapter": "睡眠"
     },
     {
-      "id": "disease_7B01",
-      "code": "7B01",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "异态睡眠障碍",
-      "chapter": "睡眠"
-    },
-    {
-      "id": "disease_7B01.0",
-      "code": "7B01.0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "异态睡眠障碍",
-      "chapter": "睡眠"
-    },
-    {
       "id": "disease_7B01.1",
       "code": "7B01.1",
       "name": "复发性孤立性睡眠麻痹",
@@ -38481,15 +37698,6 @@
       "name": "其他",
       "normalized_name": "其他",
       "aligned_name": "其他",
-      "category": "异态睡眠障碍",
-      "chapter": "睡眠"
-    },
-    {
-      "id": "disease_7B01.Z",
-      "code": "7B01.Z",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "异态睡眠障碍",
       "chapter": "睡眠"
     },
@@ -39421,15 +38629,6 @@
       "chapter": "神经系统疾病"
     },
     {
-      "id": "disease_8A05.00",
-      "code": "8A05.00",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "运动障碍性疾病",
-      "chapter": "神经系统疾病"
-    },
-    {
       "id": "disease_8A05.01",
       "code": "8A05.01",
       "name": "慢性运动性抽动障碍",
@@ -40051,29 +39250,11 @@
       "chapter": "神经系统疾病"
     },
     {
-      "id": "disease_8A44.2",
-      "code": "8A44.2",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "多发性硬化或其他脑白质病变",
-      "chapter": "神经系统疾病"
-    },
-    {
       "id": "disease_8A44.3",
       "code": "8A44.3",
       "name": "某些特指的脑白质营养不良",
       "normalized_name": "某些特指的脑白质营养不良",
       "aligned_name": "某些特指的脑白质营养不良",
-      "category": "多发性硬化或其他脑白质病变",
-      "chapter": "神经系统疾病"
-    },
-    {
-      "id": "disease_8A44.4",
-      "code": "8A44.4",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "多发性硬化或其他脑白质病变",
       "chapter": "神经系统疾病"
     },
@@ -40164,15 +39345,6 @@
       "name": "血管异常或缺血所致的白质疾患",
       "normalized_name": "血管异常或缺血所致的白质疾患",
       "aligned_name": "血管异常或缺血所致的白质疾患",
-      "category": "多发性硬化或其他脑白质病变",
-      "chapter": "神经系统疾病"
-    },
-    {
-      "id": "disease_8A45.20",
-      "code": "8A45.20",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "多发性硬化或其他脑白质病变",
       "chapter": "神经系统疾病"
     },
@@ -40821,15 +39993,6 @@
       "name": "婴儿痉挛",
       "normalized_name": "婴儿痉挛",
       "aligned_name": "婴儿痉挛",
-      "category": "癫痫或癫痫发作",
-      "chapter": "神经系统疾病"
-    },
-    {
-      "id": "disease_8A62.1",
-      "code": "8A62.1",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "癫痫或癫痫发作",
       "chapter": "神经系统疾病"
     },
@@ -42004,24 +41167,6 @@
       "chapter": "神经系统疾病"
     },
     {
-      "id": "disease_8B22.C0",
-      "code": "8B22.C0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "脑缺血",
-      "chapter": "神经系统疾病"
-    },
-    {
-      "id": "disease_8B22.C1",
-      "code": "8B22.C1",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "脑缺血",
-      "chapter": "神经系统疾病"
-    },
-    {
       "id": "disease_8B22.CZ",
       "code": "8B22.CZ",
       "name": "遗传性脑血管性疾病",
@@ -42373,15 +41518,6 @@
       "chapter": "神经系统疾病"
     },
     {
-      "id": "disease_8B44.02",
-      "code": "8B44.02",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "非创伤性脊髓病变",
-      "chapter": "神经系统疾病"
-    },
-    {
       "id": "disease_8B44.0Y",
       "code": "8B44.0Y",
       "name": "其他特指的遗传性痉挛性截瘫",
@@ -42504,15 +41640,6 @@
       "name": "单肢肌萎缩",
       "normalized_name": "单肢肌萎缩",
       "aligned_name": "单肢肌萎缩",
-      "category": "运动神经元疾病或相关疾患",
-      "chapter": "神经系统疾病"
-    },
-    {
-      "id": "disease_8B60.7",
-      "code": "8B60.7",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "运动神经元疾病或相关疾患",
       "chapter": "神经系统疾病"
     },
@@ -43561,24 +42688,6 @@
       "chapter": "神经系统疾病"
     },
     {
-      "id": "disease_8C20.0",
-      "code": "8C20.0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "遗传性神经病",
-      "chapter": "神经系统疾病"
-    },
-    {
-      "id": "disease_8C20.1",
-      "code": "8C20.1",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "遗传性神经病",
-      "chapter": "神经系统疾病"
-    },
-    {
       "id": "disease_8C20.2",
       "code": "8C20.2",
       "name": "中间型",
@@ -43750,15 +42859,6 @@
       "chapter": "神经系统疾病"
     },
     {
-      "id": "disease_8C62",
-      "code": "8C62",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "重症肌无力或某些特指的肌肉神经接头疾患",
-      "chapter": "神经系统疾病"
-    },
-    {
       "id": "disease_8C6Y",
       "code": "8C6Y",
       "name": "其他特指的重症肌无力和神经",
@@ -43782,33 +42882,6 @@
       "name": "肌营养不良",
       "normalized_name": "肌营养不良",
       "aligned_name": "肌营养不良",
-      "category": "原发性肌肉功能障碍",
-      "chapter": "神经系统疾病"
-    },
-    {
-      "id": "disease_8C70.0",
-      "code": "8C70.0",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "原发性肌肉功能障碍",
-      "chapter": "神经系统疾病"
-    },
-    {
-      "id": "disease_8C70.1",
-      "code": "8C70.1",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "原发性肌肉功能障碍",
-      "chapter": "神经系统疾病"
-    },
-    {
-      "id": "disease_8C70.2",
-      "code": "8C70.2",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "原发性肌肉功能障碍",
       "chapter": "神经系统疾病"
     },
@@ -44421,15 +43494,6 @@
       "name": "共济失调性脑瘫",
       "normalized_name": "共济失调性脑瘫",
       "aligned_name": "共济失调性脑瘫",
-      "category": "脑瘫",
-      "chapter": "神经系统疾病"
-    },
-    {
-      "id": "disease_8D23",
-      "code": "8D23",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
       "category": "脑瘫",
       "chapter": "神经系统疾病"
     },
@@ -45883,15 +44947,6 @@
       "chapter": "神经系统疾病"
     },
     {
-      "id": "disease_8E46",
-      "code": "8E46",
-      "name": "",
-      "normalized_name": "",
-      "aligned_name": "",
-      "category": "神经系统其他疾患",
-      "chapter": "神经系统疾病"
-    },
-    {
       "id": "disease_8E47",
       "code": "8E47",
       "name": "脑病",
@@ -46340,6 +45395,213 @@
       "aligned_name": "上睑下垂",
       "category": "眼睑或眼周区疾患",
       "chapter": "视觉系统疾病"
+    },
+    {
+      "id": "disease_canonical_先天性心脏病",
+      "code": "INSURANCE",
+      "name": "先天性心脏病",
+      "normalized_name": "先天性心脏病",
+      "aligned_name": "先天性心脏病",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_先天性畸形",
+      "code": "INSURANCE",
+      "name": "先天性畸形",
+      "normalized_name": "先天性畸形",
+      "aligned_name": "先天性畸形",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_关节炎",
+      "code": "INSURANCE",
+      "name": "关节炎",
+      "normalized_name": "关节炎",
+      "aligned_name": "关节炎",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_冠心病",
+      "code": "INSURANCE",
+      "name": "冠心病",
+      "normalized_name": "冠心病",
+      "aligned_name": "冠心病",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_原位癌",
+      "code": "INSURANCE",
+      "name": "原位癌",
+      "normalized_name": "原位癌",
+      "aligned_name": "原位癌",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_器官移植",
+      "code": "INSURANCE",
+      "name": "器官移植",
+      "normalized_name": "器官移植",
+      "aligned_name": "器官移植",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_帕金森",
+      "code": "INSURANCE",
+      "name": "帕金森",
+      "normalized_name": "帕金森",
+      "aligned_name": "帕金森",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_心肌梗死",
+      "code": "INSURANCE",
+      "name": "心肌梗死",
+      "normalized_name": "心肌梗死",
+      "aligned_name": "心肌梗死",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_猝死",
+      "code": "INSURANCE",
+      "name": "猝死",
+      "normalized_name": "猝死",
+      "aligned_name": "猝死",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_甲状腺结节",
+      "code": "INSURANCE",
+      "name": "甲状腺结节",
+      "normalized_name": "甲状腺结节",
+      "aligned_name": "甲状腺结节",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_瘫痪",
+      "code": "INSURANCE",
+      "name": "瘫痪",
+      "normalized_name": "瘫痪",
+      "aligned_name": "瘫痪",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_精神病",
+      "code": "INSURANCE",
+      "name": "精神病",
+      "normalized_name": "精神病",
+      "aligned_name": "精神病",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_肝硬化",
+      "code": "INSURANCE",
+      "name": "肝硬化",
+      "normalized_name": "肝硬化",
+      "aligned_name": "肝硬化",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_肺炎",
+      "code": "INSURANCE",
+      "name": "肺炎",
+      "normalized_name": "肺炎",
+      "aligned_name": "肺炎",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_肾病",
+      "code": "INSURANCE",
+      "name": "肾病",
+      "normalized_name": "肾病",
+      "aligned_name": "肾病",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_胃炎",
+      "code": "INSURANCE",
+      "name": "胃炎",
+      "normalized_name": "胃炎",
+      "aligned_name": "胃炎",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_脑梗死",
+      "code": "INSURANCE",
+      "name": "脑梗死",
+      "normalized_name": "脑梗死",
+      "aligned_name": "脑梗死",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_阑尾炎",
+      "code": "INSURANCE",
+      "name": "阑尾炎",
+      "normalized_name": "阑尾炎",
+      "aligned_name": "阑尾炎",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_阿尔茨海默",
+      "code": "INSURANCE",
+      "name": "阿尔茨海默",
+      "normalized_name": "阿尔茨海默",
+      "aligned_name": "阿尔茨海默",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_骨折",
+      "code": "INSURANCE",
+      "name": "骨折",
+      "normalized_name": "骨折",
+      "aligned_name": "骨折",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_骨质疏松",
+      "code": "INSURANCE",
+      "name": "骨质疏松",
+      "normalized_name": "骨质疏松",
+      "aligned_name": "骨质疏松",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_高脂血症",
+      "code": "INSURANCE",
+      "name": "高脂血症",
+      "normalized_name": "高脂血症",
+      "aligned_name": "高脂血症",
+      "category": "insurance_canonical",
+      "chapter": ""
+    },
+    {
+      "id": "disease_canonical_高血压",
+      "code": "INSURANCE",
+      "name": "高血压",
+      "normalized_name": "高血压",
+      "aligned_name": "高血压",
+      "category": "insurance_canonical",
+      "chapter": ""
     }
   ],
   "drugs": [
@@ -47954,11 +47216,1223 @@
       "level": "drug_category"
     }
   ],
-  "alignments": [],
+  "insurance_products": [
+    {
+      "id": "insurance_taiping_care",
+      "code": "IP001",
+      "name": "太平养老臻爱一生护理险",
+      "short_name": "太平养老护理险",
+      "type": "长期护理保险",
+      "company": "太平养老保险股份有限公司",
+      "description": "为失能老人提供长期护理费用补偿，覆盖居家护理、机构护理及日间照料场景",
+      "source": "太平养老保险产品说明书（模拟摘要）",
+      "annual_premium": "2000-5000元",
+      "coverage_amount": "最高50万元",
+      "waiting_period": "90天"
+    },
+    {
+      "id": "insurance_pingan_care",
+      "code": "IP002",
+      "name": "平安e生长期护理保险",
+      "short_name": "平安护理险",
+      "type": "长期护理保险",
+      "company": "中国平安人寿保险股份有限公司",
+      "description": "针对失能风险提供护理津贴，支持失智、失能双重保障",
+      "source": "平安人寿产品条款（模拟摘要）",
+      "annual_premium": "1500-4000元",
+      "coverage_amount": "最高30万元",
+      "waiting_period": "180天"
+    },
+    {
+      "id": "insurance_taikang_care",
+      "code": "IP003",
+      "name": "泰康长寿考取长期护理保险",
+      "short_name": "泰康长期护理险",
+      "type": "长期护理保险",
+      "company": "泰康人寿保险有限责任公司",
+      "description": "与泰康之家养老社区协同，提供保险+养老一站式服务",
+      "source": "泰康人寿产品说明（模拟摘要）",
+      "annual_premium": "3000-8000元",
+      "coverage_amount": "最高80万元",
+      "waiting_period": "90天"
+    },
+    {
+      "id": "insurance_haoyibao_medical",
+      "code": "IP004",
+      "name": "好医保·长期医疗险",
+      "short_name": "好医保",
+      "type": "百万医疗险",
+      "company": "中国人民健康保险股份有限公司",
+      "description": "保证续保20年的长期医疗险，覆盖住院、门诊手术及特殊门诊",
+      "source": "人保健康产品条款（模拟摘要）",
+      "annual_premium": "200-1500元",
+      "coverage_amount": "400万元/年",
+      "waiting_period": "90天"
+    },
+    {
+      "id": "insurance_zhongan_medical",
+      "code": "IP005",
+      "name": "尊享e生百万医疗险",
+      "short_name": "百万医疗险",
+      "type": "百万医疗险",
+      "company": "众安在线财产保险股份有限公司",
+      "description": "高保额医疗险，覆盖一般医疗和重大疾病医疗，支持家庭共享免赔额",
+      "source": "众安保险产品条款（模拟摘要）",
+      "annual_premium": "300-2000元",
+      "coverage_amount": "600万元/年",
+      "waiting_period": "30天"
+    },
+    {
+      "id": "insurance_pingan_cancer",
+      "code": "IP006",
+      "name": "平安抗癌卫士防癌险",
+      "short_name": "防癌险",
+      "type": "防癌保险",
+      "company": "中国平安财产保险股份有限公司",
+      "description": "专项保障恶性肿瘤，健康告知宽松，适合慢病患者补充保障",
+      "source": "平安产险产品说明（模拟摘要）",
+      "annual_premium": "500-3000元",
+      "coverage_amount": "50万元",
+      "waiting_period": "180天"
+    },
+    {
+      "id": "insurance_darwin_critical",
+      "code": "IP007",
+      "name": "达尔文8号重大疾病保险",
+      "short_name": "达尔文8号重疾险",
+      "type": "重大疾病保险",
+      "company": "瑞华健康保险股份有限公司",
+      "description": "覆盖110种重大疾病、35种中症、40种轻症，含恶性肿瘤多次赔付",
+      "source": "瑞华健康产品条款（模拟摘要）",
+      "annual_premium": "3000-15000元",
+      "coverage_amount": "10万-50万元",
+      "waiting_period": "180天"
+    },
+    {
+      "id": "insurance_cpic_golden",
+      "code": "IP008",
+      "name": "太保金佑人生终身寿险（附加重疾）",
+      "short_name": "金佑人生",
+      "type": "重大疾病保险",
+      "company": "中国太平洋人寿保险股份有限公司",
+      "description": "终身寿险附加重疾保障，身故+重疾双重保障，保额逐年递增",
+      "source": "太平洋保险条款（模拟摘要）",
+      "annual_premium": "5000-20000元",
+      "coverage_amount": "20万-80万元",
+      "waiting_period": "180天"
+    },
+    {
+      "id": "insurance_zhongan_elderly_accident",
+      "code": "IP009",
+      "name": "众安中老年意外险（尊享版）",
+      "short_name": "中老年意外险",
+      "type": "意外伤害保险",
+      "company": "众安在线财产保险股份有限公司",
+      "description": "专为中老年人设计，含意外医疗、意外住院津贴及救护车费用",
+      "source": "众安保险产品说明（模拟摘要）",
+      "annual_premium": "200-800元",
+      "coverage_amount": "20万元意外身故+2万意外医疗",
+      "waiting_period": "无等待期"
+    },
+    {
+      "id": "insurance_taikang_annuity_care",
+      "code": "IP010",
+      "name": "泰康百岁人生养老年金险（附加长期护理）",
+      "short_name": "百岁人生年金险",
+      "type": "养老年金保险",
+      "company": "泰康人寿保险有限责任公司",
+      "description": "养老年金+长期护理双重保障，满期领取养老金，失能时触发护理金",
+      "source": "泰康人寿产品说明（模拟摘要）",
+      "annual_premium": "5000-30000元",
+      "coverage_amount": "年金+护理金合计最高100万元",
+      "waiting_period": "90天"
+    }
+  ],
+  "institutions": [
+    {
+      "id": "ca_beijing_songtang",
+      "name": "北京松堂关怀医院",
+      "type": "医养结合机构",
+      "city": "北京市",
+      "district": "朝阳区",
+      "address": "北京市朝阳区管庄乡管庄路9号",
+      "phone": "010-65791588",
+      "monthly_fee": "3000-8000元/月",
+      "admission_requirements": "60岁以上，需健康评估",
+      "bed_count": 400,
+      "rating": "三星级",
+      "source": "北京市民政局养老机构公示",
+      "location": null
+    },
+    {
+      "id": "ca_beijing_taikang_yanyuan",
+      "name": "泰康之家·燕园",
+      "type": "高端养老社区",
+      "city": "北京市",
+      "district": "昌平区",
+      "address": "北京市昌平区崔村镇香堂村",
+      "phone": "010-89788888",
+      "monthly_fee": "10000-25000元/月",
+      "admission_requirements": "55岁以上，签署入住协议",
+      "bed_count": 3000,
+      "rating": "五星级",
+      "source": "泰康保险集团公开信息",
+      "location": null
+    },
+    {
+      "id": "ca_beijing_first_social",
+      "name": "北京市第一社会福利院",
+      "type": "公办养老机构",
+      "city": "北京市",
+      "district": "朝阳区",
+      "address": "北京市朝阳区化工路甲5号",
+      "phone": "010-67383531",
+      "monthly_fee": "2000-5000元/月",
+      "admission_requirements": "本市户籍优先，65岁以上",
+      "bed_count": 500,
+      "rating": "四星级",
+      "source": "北京市民政局公开信息",
+      "location": null
+    },
+    {
+      "id": "ca_beijing_sanyuan",
+      "name": "北京市第三社会福利院",
+      "type": "公办养老机构",
+      "city": "北京市",
+      "district": "昌平区",
+      "address": "北京市昌平区沙河镇百善村",
+      "phone": "010-61782688",
+      "monthly_fee": "2500-5500元/月",
+      "admission_requirements": "65岁以上，身体健康评估合格",
+      "bed_count": 600,
+      "rating": "四星级",
+      "source": "北京市民政局公开信息",
+      "location": null
+    },
+    {
+      "id": "ca_beijing_chunshu",
+      "name": "北京椿萱茂（亦庄）老年公寓",
+      "type": "民办养老机构",
+      "city": "北京市",
+      "district": "大兴区",
+      "address": "北京市大兴区亦庄经济开发区经海二路13号",
+      "phone": "010-67896666",
+      "monthly_fee": "8000-18000元/月",
+      "admission_requirements": "60岁以上",
+      "bed_count": 200,
+      "rating": "四星级",
+      "source": "北京市民政局养老机构名录",
+      "location": null
+    },
+    {
+      "id": "ca_shanghai_first_welfare",
+      "name": "上海市第一社会福利院",
+      "type": "公办养老机构",
+      "city": "上海市",
+      "district": "徐汇区",
+      "address": "上海市徐汇区宛平南路465号",
+      "phone": "021-64362801",
+      "monthly_fee": "3000-6000元/月",
+      "admission_requirements": "本市户籍，65岁以上",
+      "bed_count": 800,
+      "rating": "五星级",
+      "source": "上海市民政局公开公示",
+      "location": null
+    },
+    {
+      "id": "ca_shanghai_taikang_shenyuan",
+      "name": "泰康之家·申园",
+      "type": "高端养老社区",
+      "city": "上海市",
+      "district": "松江区",
+      "address": "上海市松江区广富林路328号",
+      "phone": "021-37656666",
+      "monthly_fee": "12000-28000元/月",
+      "admission_requirements": "55岁以上",
+      "bed_count": 2100,
+      "rating": "五星级",
+      "source": "泰康保险集团公开信息",
+      "location": null
+    },
+    {
+      "id": "ca_shanghai_yangpu",
+      "name": "上海市杨浦区社会福利院",
+      "type": "公办养老机构",
+      "city": "上海市",
+      "district": "杨浦区",
+      "address": "上海市杨浦区辽源西路158号",
+      "phone": "021-65432100",
+      "monthly_fee": "2500-5000元/月",
+      "admission_requirements": "65岁以上，本区户籍优先",
+      "bed_count": 350,
+      "rating": "三星级",
+      "source": "上海市民政局公开公示",
+      "location": null
+    },
+    {
+      "id": "ca_shanghai_ruijin",
+      "name": "上海瑞金护理院",
+      "type": "护理院",
+      "city": "上海市",
+      "district": "黄浦区",
+      "address": "上海市黄浦区瑞金二路197号",
+      "phone": "021-64370045",
+      "monthly_fee": "6000-15000元/月",
+      "admission_requirements": "需医疗评估，不限年龄",
+      "bed_count": 150,
+      "rating": "四星级",
+      "source": "上海市民政局养老机构名录",
+      "location": null
+    },
+    {
+      "id": "ca_shenzhen_welfare",
+      "name": "深圳市社会福利中心",
+      "type": "公办养老机构",
+      "city": "深圳市",
+      "district": "福田区",
+      "address": "深圳市福田区香蜜湖街道农林路71号",
+      "phone": "0755-83925111",
+      "monthly_fee": "3500-7000元/月",
+      "admission_requirements": "65岁以上，深圳户籍优先",
+      "bed_count": 500,
+      "rating": "五星级",
+      "source": "深圳市民政局政务公开",
+      "location": null
+    },
+    {
+      "id": "ca_shenzhen_nanshan",
+      "name": "深圳市南山区社会福利中心",
+      "type": "公办养老机构",
+      "city": "深圳市",
+      "district": "南山区",
+      "address": "深圳市南山区西丽街道留仙大道3033号",
+      "phone": "0755-26558888",
+      "monthly_fee": "3000-6500元/月",
+      "admission_requirements": "60岁以上",
+      "bed_count": 400,
+      "rating": "四星级",
+      "source": "深圳市民政局政务公开",
+      "location": null
+    },
+    {
+      "id": "ca_shenzhen_taikang_qin",
+      "name": "泰康之家·鹏园",
+      "type": "高端养老社区",
+      "city": "深圳市",
+      "district": "大鹏新区",
+      "address": "深圳市大鹏新区葵涌街道",
+      "phone": "0755-28336666",
+      "monthly_fee": "15000-30000元/月",
+      "admission_requirements": "55岁以上",
+      "bed_count": 800,
+      "rating": "五星级",
+      "source": "泰康保险集团公开信息",
+      "location": null
+    },
+    {
+      "id": "ca_guangzhou_baiyun",
+      "name": "广州市白云区社会福利服务中心",
+      "type": "公办养老机构",
+      "city": "广州市",
+      "district": "白云区",
+      "address": "广州市白云区太和镇大源村",
+      "phone": "020-87432100",
+      "monthly_fee": "2500-5500元/月",
+      "admission_requirements": "65岁以上，广州户籍优先",
+      "bed_count": 300,
+      "rating": "三星级",
+      "source": "广州市民政局公开信息",
+      "location": null
+    },
+    {
+      "id": "ca_guangzhou_yangcheng",
+      "name": "广州市越秀区羊城养老院",
+      "type": "民办养老机构",
+      "city": "广州市",
+      "district": "越秀区",
+      "address": "广州市越秀区农林下路19号",
+      "phone": "020-87654321",
+      "monthly_fee": "4000-9000元/月",
+      "admission_requirements": "60岁以上",
+      "bed_count": 180,
+      "rating": "三星级",
+      "source": "广州市民政局养老机构名录",
+      "location": null
+    },
+    {
+      "id": "ca_guangzhou_vanke",
+      "name": "万科榕悦城市长者照料中心",
+      "type": "社区养老照料中心",
+      "city": "广州市",
+      "district": "天河区",
+      "address": "广州市天河区黄埔大道西",
+      "phone": "020-38888888",
+      "monthly_fee": "5000-12000元/月",
+      "admission_requirements": "60岁以上",
+      "bed_count": 120,
+      "rating": "四星级",
+      "source": "广州市民政局养老机构名录",
+      "location": null
+    },
+    {
+      "id": "ca_suzhou_gusu",
+      "name": "苏州市姑苏区老年公寓",
+      "type": "公办养老机构",
+      "city": "苏州市",
+      "district": "姑苏区",
+      "address": "苏州市姑苏区干将西路",
+      "phone": "0512-65234567",
+      "monthly_fee": "2800-5500元/月",
+      "admission_requirements": "65岁以上，苏州户籍优先",
+      "bed_count": 250,
+      "rating": "三星级",
+      "source": "苏州市民政局养老机构监管名单",
+      "location": null
+    },
+    {
+      "id": "ca_suzhou_industrial",
+      "name": "苏州工业园区社会福利中心",
+      "type": "公办养老机构",
+      "city": "苏州市",
+      "district": "工业园区",
+      "address": "苏州市工业园区星湖街328号",
+      "phone": "0512-62888888",
+      "monthly_fee": "3500-7000元/月",
+      "admission_requirements": "60岁以上",
+      "bed_count": 350,
+      "rating": "四星级",
+      "source": "苏州市民政局养老机构监管名单",
+      "location": null
+    },
+    {
+      "id": "ca_hangzhou_westlake",
+      "name": "杭州市西湖区社会福利中心",
+      "type": "公办养老机构",
+      "city": "杭州市",
+      "district": "西湖区",
+      "address": "杭州市西湖区转塘街道",
+      "phone": "0571-87968888",
+      "monthly_fee": "3000-6500元/月",
+      "admission_requirements": "65岁以上",
+      "bed_count": 280,
+      "rating": "四星级",
+      "source": "杭州市民政局公开信息",
+      "location": null
+    },
+    {
+      "id": "ca_chengdu_wuhou",
+      "name": "成都市武侯区社会福利院",
+      "type": "公办养老机构",
+      "city": "成都市",
+      "district": "武侯区",
+      "address": "成都市武侯区簇桥街道",
+      "phone": "028-85336666",
+      "monthly_fee": "2200-4800元/月",
+      "admission_requirements": "65岁以上，成都户籍优先",
+      "bed_count": 320,
+      "rating": "三星级",
+      "source": "成都市民政局公开信息",
+      "location": null
+    },
+    {
+      "id": "ca_wuhan_jianghan",
+      "name": "武汉市江汉区社会福利院",
+      "type": "公办养老机构",
+      "city": "武汉市",
+      "district": "江汉区",
+      "address": "武汉市江汉区常青路",
+      "phone": "027-85888888",
+      "monthly_fee": "2500-5000元/月",
+      "admission_requirements": "65岁以上",
+      "bed_count": 200,
+      "rating": "三星级",
+      "source": "武汉市民政局公开信息",
+      "location": null
+    }
+  ],
+  "age_limits": [
+    {
+      "id": "age_limit_insurance_taiping_care",
+      "min_age": 18,
+      "max_age": 75,
+      "label": "18-75岁"
+    },
+    {
+      "id": "age_limit_insurance_pingan_care",
+      "min_age": 18,
+      "max_age": 65,
+      "label": "18-65岁"
+    },
+    {
+      "id": "age_limit_insurance_taikang_care",
+      "min_age": 40,
+      "max_age": 70,
+      "label": "40-70岁"
+    },
+    {
+      "id": "age_limit_insurance_haoyibao_medical",
+      "min_age": 0,
+      "max_age": 60,
+      "label": "0-60岁"
+    },
+    {
+      "id": "age_limit_insurance_zhongan_medical",
+      "min_age": 30,
+      "max_age": 65,
+      "label": "30-65岁"
+    },
+    {
+      "id": "age_limit_insurance_pingan_cancer",
+      "min_age": 18,
+      "max_age": 70,
+      "label": "18-70岁"
+    },
+    {
+      "id": "age_limit_insurance_darwin_critical",
+      "min_age": 0,
+      "max_age": 55,
+      "label": "0-55岁"
+    },
+    {
+      "id": "age_limit_insurance_cpic_golden",
+      "min_age": 18,
+      "max_age": 50,
+      "label": "18-50岁"
+    },
+    {
+      "id": "age_limit_insurance_zhongan_elderly_accident",
+      "min_age": 50,
+      "max_age": 80,
+      "label": "50-80岁"
+    },
+    {
+      "id": "age_limit_insurance_taikang_annuity_care",
+      "min_age": 28,
+      "max_age": 65,
+      "label": "28-65岁"
+    }
+  ],
+  "medical_services": [
+    {
+      "id": "medical_service_0000",
+      "name": "长期护理服务",
+      "description": "长期护理服务"
+    },
+    {
+      "id": "medical_service_0001",
+      "name": "康复护理",
+      "description": "康复护理"
+    },
+    {
+      "id": "medical_service_0002",
+      "name": "生活照料",
+      "description": "生活照料"
+    },
+    {
+      "id": "medical_service_0003",
+      "name": "失能护理",
+      "description": "失能护理"
+    },
+    {
+      "id": "medical_service_0004",
+      "name": "认知障碍护理",
+      "description": "认知障碍护理"
+    },
+    {
+      "id": "medical_service_0005",
+      "name": "机构养老护理",
+      "description": "机构养老护理"
+    },
+    {
+      "id": "medical_service_0006",
+      "name": "医养结合服务",
+      "description": "医养结合服务"
+    },
+    {
+      "id": "medical_service_0007",
+      "name": "康复理疗",
+      "description": "康复理疗"
+    },
+    {
+      "id": "medical_service_0008",
+      "name": "住院医疗服务",
+      "description": "住院医疗服务"
+    },
+    {
+      "id": "medical_service_0009",
+      "name": "门诊手术",
+      "description": "门诊手术"
+    },
+    {
+      "id": "medical_service_0010",
+      "name": "特殊门诊治疗",
+      "description": "特殊门诊治疗"
+    },
+    {
+      "id": "medical_service_0011",
+      "name": "重疾住院",
+      "description": "重疾住院"
+    },
+    {
+      "id": "medical_service_0012",
+      "name": "海外医疗服务",
+      "description": "海外医疗服务"
+    },
+    {
+      "id": "medical_service_0013",
+      "name": "肿瘤治疗",
+      "description": "肿瘤治疗"
+    },
+    {
+      "id": "medical_service_0014",
+      "name": "癌症住院",
+      "description": "癌症住院"
+    },
+    {
+      "id": "medical_service_0015",
+      "name": "放疗化疗",
+      "description": "放疗化疗"
+    },
+    {
+      "id": "medical_service_0016",
+      "name": "重疾治疗",
+      "description": "重疾治疗"
+    },
+    {
+      "id": "medical_service_0017",
+      "name": "重症监护",
+      "description": "重症监护"
+    },
+    {
+      "id": "medical_service_0018",
+      "name": "身故保障",
+      "description": "身故保障"
+    },
+    {
+      "id": "medical_service_0019",
+      "name": "意外医疗",
+      "description": "意外医疗"
+    },
+    {
+      "id": "medical_service_0020",
+      "name": "紧急救护",
+      "description": "紧急救护"
+    },
+    {
+      "id": "medical_service_0021",
+      "name": "住院津贴",
+      "description": "住院津贴"
+    },
+    {
+      "id": "medical_service_0022",
+      "name": "养老服务",
+      "description": "养老服务"
+    },
+    {
+      "id": "medical_service_0023",
+      "name": "长期护理",
+      "description": "长期护理"
+    },
+    {
+      "id": "medical_service_0024",
+      "name": "机构养老",
+      "description": "机构养老"
+    },
+    {
+      "id": "medical_service_0025",
+      "name": "智慧养老",
+      "description": "智慧养老"
+    },
+    {
+      "id": "medical_service_0026",
+      "name": "西湖周边康养",
+      "description": "西湖周边康养"
+    },
+    {
+      "id": "medical_service_0027",
+      "name": "川式康养",
+      "description": "川式康养"
+    }
+  ],
+  "value_nodes": [
+    {
+      "id": "price_insurance_taiping_care",
+      "value": "2000-5000元",
+      "type": "Price",
+      "label": "2000-5000元"
+    },
+    {
+      "id": "coverage_insurance_taiping_care_0",
+      "value": "长期护理费用",
+      "type": "Coverage",
+      "label": "长期护理费用"
+    },
+    {
+      "id": "coverage_insurance_taiping_care_1",
+      "value": "居家护理服务",
+      "type": "Coverage",
+      "label": "居家护理服务"
+    },
+    {
+      "id": "coverage_insurance_taiping_care_2",
+      "value": "养老机构护理",
+      "type": "Coverage",
+      "label": "养老机构护理"
+    },
+    {
+      "id": "coverage_insurance_taiping_care_3",
+      "value": "日间照料补贴",
+      "type": "Coverage",
+      "label": "日间照料补贴"
+    },
+    {
+      "id": "price_insurance_pingan_care",
+      "value": "1500-4000元",
+      "type": "Price",
+      "label": "1500-4000元"
+    },
+    {
+      "id": "coverage_insurance_pingan_care_0",
+      "value": "护理服务费用",
+      "type": "Coverage",
+      "label": "护理服务费用"
+    },
+    {
+      "id": "coverage_insurance_pingan_care_1",
+      "value": "失能护理津贴",
+      "type": "Coverage",
+      "label": "失能护理津贴"
+    },
+    {
+      "id": "coverage_insurance_pingan_care_2",
+      "value": "失智护理津贴",
+      "type": "Coverage",
+      "label": "失智护理津贴"
+    },
+    {
+      "id": "coverage_insurance_pingan_care_3",
+      "value": "身故保险金",
+      "type": "Coverage",
+      "label": "身故保险金"
+    },
+    {
+      "id": "price_insurance_taikang_care",
+      "value": "3000-8000元",
+      "type": "Price",
+      "label": "3000-8000元"
+    },
+    {
+      "id": "coverage_insurance_taikang_care_0",
+      "value": "长期护理保险金",
+      "type": "Coverage",
+      "label": "长期护理保险金"
+    },
+    {
+      "id": "coverage_insurance_taikang_care_1",
+      "value": "泰康之家入住权益",
+      "type": "Coverage",
+      "label": "泰康之家入住权益"
+    },
+    {
+      "id": "coverage_insurance_taikang_care_2",
+      "value": "居家护理补贴",
+      "type": "Coverage",
+      "label": "居家护理补贴"
+    },
+    {
+      "id": "coverage_insurance_taikang_care_3",
+      "value": "紧急救援服务",
+      "type": "Coverage",
+      "label": "紧急救援服务"
+    },
+    {
+      "id": "price_insurance_haoyibao_medical",
+      "value": "200-1500元",
+      "type": "Price",
+      "label": "200-1500元"
+    },
+    {
+      "id": "coverage_insurance_haoyibao_medical_0",
+      "value": "住院医疗费用",
+      "type": "Coverage",
+      "label": "住院医疗费用"
+    },
+    {
+      "id": "coverage_insurance_haoyibao_medical_1",
+      "value": "特殊门诊",
+      "type": "Coverage",
+      "label": "特殊门诊"
+    },
+    {
+      "id": "coverage_insurance_haoyibao_medical_2",
+      "value": "门诊手术",
+      "type": "Coverage",
+      "label": "门诊手术"
+    },
+    {
+      "id": "coverage_insurance_haoyibao_medical_3",
+      "value": "住院前后门急诊",
+      "type": "Coverage",
+      "label": "住院前后门急诊"
+    },
+    {
+      "id": "coverage_insurance_haoyibao_medical_4",
+      "value": "质子重离子治疗",
+      "type": "Coverage",
+      "label": "质子重离子治疗"
+    },
+    {
+      "id": "price_insurance_zhongan_medical",
+      "value": "300-2000元",
+      "type": "Price",
+      "label": "300-2000元"
+    },
+    {
+      "id": "coverage_insurance_zhongan_medical_0",
+      "value": "一般住院医疗",
+      "type": "Coverage",
+      "label": "一般住院医疗"
+    },
+    {
+      "id": "coverage_insurance_zhongan_medical_1",
+      "value": "重大疾病住院",
+      "type": "Coverage",
+      "label": "重大疾病住院"
+    },
+    {
+      "id": "coverage_insurance_zhongan_medical_2",
+      "value": "恶性肿瘤质子重离子",
+      "type": "Coverage",
+      "label": "恶性肿瘤质子重离子"
+    },
+    {
+      "id": "coverage_insurance_zhongan_medical_3",
+      "value": "海外二次诊疗",
+      "type": "Coverage",
+      "label": "海外二次诊疗"
+    },
+    {
+      "id": "coverage_insurance_zhongan_medical_4",
+      "value": "住院垫付服务",
+      "type": "Coverage",
+      "label": "住院垫付服务"
+    },
+    {
+      "id": "price_insurance_pingan_cancer",
+      "value": "500-3000元",
+      "type": "Price",
+      "label": "500-3000元"
+    },
+    {
+      "id": "coverage_insurance_pingan_cancer_0",
+      "value": "恶性肿瘤保险金",
+      "type": "Coverage",
+      "label": "恶性肿瘤保险金"
+    },
+    {
+      "id": "coverage_insurance_pingan_cancer_1",
+      "value": "原位癌保险金",
+      "type": "Coverage",
+      "label": "原位癌保险金"
+    },
+    {
+      "id": "coverage_insurance_pingan_cancer_2",
+      "value": "癌症住院津贴",
+      "type": "Coverage",
+      "label": "癌症住院津贴"
+    },
+    {
+      "id": "coverage_insurance_pingan_cancer_3",
+      "value": "癌症手术津贴",
+      "type": "Coverage",
+      "label": "癌症手术津贴"
+    },
+    {
+      "id": "price_insurance_darwin_critical",
+      "value": "3000-15000元",
+      "type": "Price",
+      "label": "3000-15000元"
+    },
+    {
+      "id": "coverage_insurance_darwin_critical_0",
+      "value": "重大疾病保险金",
+      "type": "Coverage",
+      "label": "重大疾病保险金"
+    },
+    {
+      "id": "coverage_insurance_darwin_critical_1",
+      "value": "中症疾病保险金",
+      "type": "Coverage",
+      "label": "中症疾病保险金"
+    },
+    {
+      "id": "coverage_insurance_darwin_critical_2",
+      "value": "轻症疾病保险金",
+      "type": "Coverage",
+      "label": "轻症疾病保险金"
+    },
+    {
+      "id": "coverage_insurance_darwin_critical_3",
+      "value": "恶性肿瘤多次赔付",
+      "type": "Coverage",
+      "label": "恶性肿瘤多次赔付"
+    },
+    {
+      "id": "coverage_insurance_darwin_critical_4",
+      "value": "身故/全残保险金",
+      "type": "Coverage",
+      "label": "身故/全残保险金"
+    },
+    {
+      "id": "price_insurance_cpic_golden",
+      "value": "5000-20000元",
+      "type": "Price",
+      "label": "5000-20000元"
+    },
+    {
+      "id": "coverage_insurance_cpic_golden_0",
+      "value": "身故保险金",
+      "type": "Coverage",
+      "label": "身故保险金"
+    },
+    {
+      "id": "coverage_insurance_cpic_golden_1",
+      "value": "全残保险金",
+      "type": "Coverage",
+      "label": "全残保险金"
+    },
+    {
+      "id": "coverage_insurance_cpic_golden_2",
+      "value": "88种重大疾病",
+      "type": "Coverage",
+      "label": "88种重大疾病"
+    },
+    {
+      "id": "coverage_insurance_cpic_golden_3",
+      "value": "20种特定疾病",
+      "type": "Coverage",
+      "label": "20种特定疾病"
+    },
+    {
+      "id": "coverage_insurance_cpic_golden_4",
+      "value": "保费豁免",
+      "type": "Coverage",
+      "label": "保费豁免"
+    },
+    {
+      "id": "price_insurance_zhongan_elderly_accident",
+      "value": "200-800元",
+      "type": "Price",
+      "label": "200-800元"
+    },
+    {
+      "id": "coverage_insurance_zhongan_elderly_accident_0",
+      "value": "意外身故/伤残",
+      "type": "Coverage",
+      "label": "意外身故/伤残"
+    },
+    {
+      "id": "coverage_insurance_zhongan_elderly_accident_1",
+      "value": "意外医疗费用",
+      "type": "Coverage",
+      "label": "意外医疗费用"
+    },
+    {
+      "id": "coverage_insurance_zhongan_elderly_accident_2",
+      "value": "意外住院津贴",
+      "type": "Coverage",
+      "label": "意外住院津贴"
+    },
+    {
+      "id": "coverage_insurance_zhongan_elderly_accident_3",
+      "value": "救护车费用",
+      "type": "Coverage",
+      "label": "救护车费用"
+    },
+    {
+      "id": "coverage_insurance_zhongan_elderly_accident_4",
+      "value": "骨折津贴",
+      "type": "Coverage",
+      "label": "骨折津贴"
+    },
+    {
+      "id": "price_insurance_taikang_annuity_care",
+      "value": "5000-30000元",
+      "type": "Price",
+      "label": "5000-30000元"
+    },
+    {
+      "id": "coverage_insurance_taikang_annuity_care_0",
+      "value": "养老年金",
+      "type": "Coverage",
+      "label": "养老年金"
+    },
+    {
+      "id": "coverage_insurance_taikang_annuity_care_1",
+      "value": "长期护理保险金",
+      "type": "Coverage",
+      "label": "长期护理保险金"
+    },
+    {
+      "id": "coverage_insurance_taikang_annuity_care_2",
+      "value": "身故保险金",
+      "type": "Coverage",
+      "label": "身故保险金"
+    },
+    {
+      "id": "coverage_insurance_taikang_annuity_care_3",
+      "value": "保单贷款",
+      "type": "Coverage",
+      "label": "保单贷款"
+    },
+    {
+      "id": "coverage_insurance_taikang_annuity_care_4",
+      "value": "泰康之家优先入住",
+      "type": "Coverage",
+      "label": "泰康之家优先入住"
+    },
+    {
+      "id": "monthly_fee_ca_beijing_songtang",
+      "value": "3000-8000元/月",
+      "type": "Price",
+      "label": "3000-8000元/月"
+    },
+    {
+      "id": "admission_ca_beijing_songtang",
+      "value": "60岁以上，需健康评估",
+      "type": "AdmissionRequirement",
+      "label": "60岁以上，需健康评估"
+    },
+    {
+      "id": "monthly_fee_ca_beijing_taikang_yanyuan",
+      "value": "10000-25000元/月",
+      "type": "Price",
+      "label": "10000-25000元/月"
+    },
+    {
+      "id": "admission_ca_beijing_taikang_yanyuan",
+      "value": "55岁以上，签署入住协议",
+      "type": "AdmissionRequirement",
+      "label": "55岁以上，签署入住协议"
+    },
+    {
+      "id": "monthly_fee_ca_beijing_first_social",
+      "value": "2000-5000元/月",
+      "type": "Price",
+      "label": "2000-5000元/月"
+    },
+    {
+      "id": "admission_ca_beijing_first_social",
+      "value": "本市户籍优先，65岁以上",
+      "type": "AdmissionRequirement",
+      "label": "本市户籍优先，65岁以上"
+    },
+    {
+      "id": "monthly_fee_ca_beijing_sanyuan",
+      "value": "2500-5500元/月",
+      "type": "Price",
+      "label": "2500-5500元/月"
+    },
+    {
+      "id": "admission_ca_beijing_sanyuan",
+      "value": "65岁以上，身体健康评估合格",
+      "type": "AdmissionRequirement",
+      "label": "65岁以上，身体健康评估合格"
+    },
+    {
+      "id": "monthly_fee_ca_beijing_chunshu",
+      "value": "8000-18000元/月",
+      "type": "Price",
+      "label": "8000-18000元/月"
+    },
+    {
+      "id": "admission_ca_beijing_chunshu",
+      "value": "60岁以上",
+      "type": "AdmissionRequirement",
+      "label": "60岁以上"
+    },
+    {
+      "id": "monthly_fee_ca_shanghai_first_welfare",
+      "value": "3000-6000元/月",
+      "type": "Price",
+      "label": "3000-6000元/月"
+    },
+    {
+      "id": "admission_ca_shanghai_first_welfare",
+      "value": "本市户籍，65岁以上",
+      "type": "AdmissionRequirement",
+      "label": "本市户籍，65岁以上"
+    },
+    {
+      "id": "monthly_fee_ca_shanghai_taikang_shenyuan",
+      "value": "12000-28000元/月",
+      "type": "Price",
+      "label": "12000-28000元/月"
+    },
+    {
+      "id": "admission_ca_shanghai_taikang_shenyuan",
+      "value": "55岁以上",
+      "type": "AdmissionRequirement",
+      "label": "55岁以上"
+    },
+    {
+      "id": "monthly_fee_ca_shanghai_yangpu",
+      "value": "2500-5000元/月",
+      "type": "Price",
+      "label": "2500-5000元/月"
+    },
+    {
+      "id": "admission_ca_shanghai_yangpu",
+      "value": "65岁以上，本区户籍优先",
+      "type": "AdmissionRequirement",
+      "label": "65岁以上，本区户籍优先"
+    },
+    {
+      "id": "monthly_fee_ca_shanghai_ruijin",
+      "value": "6000-15000元/月",
+      "type": "Price",
+      "label": "6000-15000元/月"
+    },
+    {
+      "id": "admission_ca_shanghai_ruijin",
+      "value": "需医疗评估，不限年龄",
+      "type": "AdmissionRequirement",
+      "label": "需医疗评估，不限年龄"
+    },
+    {
+      "id": "monthly_fee_ca_shenzhen_welfare",
+      "value": "3500-7000元/月",
+      "type": "Price",
+      "label": "3500-7000元/月"
+    },
+    {
+      "id": "admission_ca_shenzhen_welfare",
+      "value": "65岁以上，深圳户籍优先",
+      "type": "AdmissionRequirement",
+      "label": "65岁以上，深圳户籍优先"
+    },
+    {
+      "id": "monthly_fee_ca_shenzhen_nanshan",
+      "value": "3000-6500元/月",
+      "type": "Price",
+      "label": "3000-6500元/月"
+    },
+    {
+      "id": "admission_ca_shenzhen_nanshan",
+      "value": "60岁以上",
+      "type": "AdmissionRequirement",
+      "label": "60岁以上"
+    },
+    {
+      "id": "monthly_fee_ca_shenzhen_taikang_qin",
+      "value": "15000-30000元/月",
+      "type": "Price",
+      "label": "15000-30000元/月"
+    },
+    {
+      "id": "admission_ca_shenzhen_taikang_qin",
+      "value": "55岁以上",
+      "type": "AdmissionRequirement",
+      "label": "55岁以上"
+    },
+    {
+      "id": "monthly_fee_ca_guangzhou_baiyun",
+      "value": "2500-5500元/月",
+      "type": "Price",
+      "label": "2500-5500元/月"
+    },
+    {
+      "id": "admission_ca_guangzhou_baiyun",
+      "value": "65岁以上，广州户籍优先",
+      "type": "AdmissionRequirement",
+      "label": "65岁以上，广州户籍优先"
+    },
+    {
+      "id": "monthly_fee_ca_guangzhou_yangcheng",
+      "value": "4000-9000元/月",
+      "type": "Price",
+      "label": "4000-9000元/月"
+    },
+    {
+      "id": "admission_ca_guangzhou_yangcheng",
+      "value": "60岁以上",
+      "type": "AdmissionRequirement",
+      "label": "60岁以上"
+    },
+    {
+      "id": "monthly_fee_ca_guangzhou_vanke",
+      "value": "5000-12000元/月",
+      "type": "Price",
+      "label": "5000-12000元/月"
+    },
+    {
+      "id": "admission_ca_guangzhou_vanke",
+      "value": "60岁以上",
+      "type": "AdmissionRequirement",
+      "label": "60岁以上"
+    },
+    {
+      "id": "monthly_fee_ca_suzhou_gusu",
+      "value": "2800-5500元/月",
+      "type": "Price",
+      "label": "2800-5500元/月"
+    },
+    {
+      "id": "admission_ca_suzhou_gusu",
+      "value": "65岁以上，苏州户籍优先",
+      "type": "AdmissionRequirement",
+      "label": "65岁以上，苏州户籍优先"
+    },
+    {
+      "id": "monthly_fee_ca_suzhou_industrial",
+      "value": "3500-7000元/月",
+      "type": "Price",
+      "label": "3500-7000元/月"
+    },
+    {
+      "id": "admission_ca_suzhou_industrial",
+      "value": "60岁以上",
+      "type": "AdmissionRequirement",
+      "label": "60岁以上"
+    },
+    {
+      "id": "monthly_fee_ca_hangzhou_westlake",
+      "value": "3000-6500元/月",
+      "type": "Price",
+      "label": "3000-6500元/月"
+    },
+    {
+      "id": "admission_ca_hangzhou_westlake",
+      "value": "65岁以上",
+      "type": "AdmissionRequirement",
+      "label": "65岁以上"
+    },
+    {
+      "id": "monthly_fee_ca_chengdu_wuhou",
+      "value": "2200-4800元/月",
+      "type": "Price",
+      "label": "2200-4800元/月"
+    },
+    {
+      "id": "admission_ca_chengdu_wuhou",
+      "value": "65岁以上，成都户籍优先",
+      "type": "AdmissionRequirement",
+      "label": "65岁以上，成都户籍优先"
+    },
+    {
+      "id": "monthly_fee_ca_wuhan_jianghan",
+      "value": "2500-5000元/月",
+      "type": "Price",
+      "label": "2500-5000元/月"
+    },
+    {
+      "id": "admission_ca_wuhan_jianghan",
+      "value": "65岁以上",
+      "type": "AdmissionRequirement",
+      "label": "65岁以上"
+    }
+  ],
   "entity_map": {
-    "中文名称": [
-      "disease_章节或编码"
-    ],
     "霍乱": [
       "disease_1A00"
     ],
@@ -48452,112 +48926,6 @@
     ],
     "麻风反应": [
       "disease_1B20.2"
-    ],
-    "": [
-      "disease_1B20.20",
-      "disease_1B20.21",
-      "disease_1C11.0",
-      "disease_1C33",
-      "disease_1D42",
-      "disease_1D43",
-      "disease_1D81.0",
-      "disease_1G03",
-      "disease_2A20.03",
-      "disease_2A51",
-      "disease_2A70.0",
-      "disease_2A70.1",
-      "disease_2A81.8",
-      "disease_2A82.1",
-      "disease_2A82.10",
-      "disease_2A82.1Z",
-      "disease_2A84.0",
-      "disease_2A84.1",
-      "disease_2A84.2",
-      "disease_2A86",
-      "disease_2A86.0",
-      "disease_2A86.Z",
-      "disease_2A90.0",
-      "disease_2A90.1",
-      "disease_2B02",
-      "disease_2B70.00",
-      "disease_3A20.5",
-      "disease_3A50.0",
-      "disease_3A50.0Z",
-      "disease_3A50.1",
-      "disease_3A50.2",
-      "disease_3A50.3",
-      "disease_3B12",
-      "disease_3B62.00",
-      "disease_3B62.4",
-      "disease_4A01.01",
-      "disease_4A01.11",
-      "disease_4A43.0",
-      "disease_4A44.6",
-      "disease_4A44.92",
-      "disease_4A44.AZ",
-      "disease_4A60.2",
-      "disease_4A61",
-      "disease_4B40.2",
-      "disease_5A00.02",
-      "disease_5A10",
-      "disease_5A11",
-      "disease_5A13.0",
-      "disease_5A43.1",
-      "disease_5A70.3",
-      "disease_5C50.5",
-      "disease_5C50.C",
-      "disease_5C52.03",
-      "disease_5C53.24",
-      "disease_5C58.01",
-      "disease_5C58.02",
-      "disease_5C59.1",
-      "disease_5C5A",
-      "disease_5C61.3",
-      "disease_5C64.00",
-      "disease_5D00.0",
-      "disease_5D00.1",
-      "disease_6C4C",
-      "disease_6C4C.0",
-      "disease_6C4C.1",
-      "disease_6C4C.10",
-      "disease_6C4C.11",
-      "disease_6C4C.1Z",
-      "disease_6C4C.2",
-      "disease_6C4C.20",
-      "disease_6C4C.21",
-      "disease_6C4C.22",
-      "disease_6C4C.23",
-      "disease_6C4C.2Z",
-      "disease_6C4C.3",
-      "disease_6C4C.4",
-      "disease_6C4C.5",
-      "disease_6C4C.6",
-      "disease_6C4C.70",
-      "disease_6C4C.71",
-      "disease_6C4C.Z",
-      "disease_7A20.0",
-      "disease_7A20.1",
-      "disease_7A22",
-      "disease_7B01",
-      "disease_7B01.0",
-      "disease_7B01.Z",
-      "disease_8A05.00",
-      "disease_8A44.2",
-      "disease_8A44.4",
-      "disease_8A45.20",
-      "disease_8A62.1",
-      "disease_8B22.C0",
-      "disease_8B22.C1",
-      "disease_8B44.02",
-      "disease_8B60.7",
-      "disease_8C20.0",
-      "disease_8C20.1",
-      "disease_8C62",
-      "disease_8C70.0",
-      "disease_8C70.1",
-      "disease_8C70.2",
-      "disease_8D23",
-      "disease_8E46"
     ],
     "麻风病并发症": [
       "disease_1B20.3"

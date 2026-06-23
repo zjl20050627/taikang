@@ -1,55 +1,42 @@
 # ============================================================
 # llm_factory.py - LLM 工厂函数
 # ============================================================
-# 作用：根据 config.yaml 和 .env 的配置，自动创建对应的 LLM 实例。
-#       上层代码（pipeline.py）只需调用 create_llm()，不关心具体用哪个模型。
-# ============================================================
 
 import sys
 import os
 import yaml
 
-# 添加路径
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))                   # llm-integration/
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # rag/
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-# 加载 .env 环境变量
 from dotenv import load_dotenv
 load_dotenv(
     dotenv_path=os.path.join(
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-        ".env"
+        ".env",
     )
 )
 
 from base_llm import BaseLLM
 
+_PLACEHOLDER_KEYS = {
+    "ZHIPUAI_API_KEY",
+    "DEEPSEEK_API_KEY",
+    "your_zhipuai_api_key_here",
+    "your_deepseek_api_key_here",
+}
+
+
+def _is_valid_api_key(key: str) -> bool:
+    return bool(key and key not in _PLACEHOLDER_KEYS)
+
 
 def create_llm(config_path: str = None) -> BaseLLM:
-    """
-    根据配置创建 LLM 实例（工厂函数）。
-
-    优先级：
-        1. .env 中的 API Key（最安全）
-        2. config.yaml 中的配置
-        3. 都没有 → 自动降级为 MockLLM
-
-    Args:
-        config_path: config.yaml 的路径，默认为 rag/config.yaml
-
-    Returns:
-        BaseLLM: 可用的 LLM 实例
-
-    使用示例：
-        llm = create_llm()
-        response = llm.chat([{"role": "user", "content": "你好"}])
-        print(response.content)
-    """
-    # ---- 1. 读取配置文件 ----
+    """根据配置创建 LLM 实例。"""
     if config_path is None:
         config_path = os.path.join(
             os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-            "config.yaml"
+            "config.yaml",
         )
 
     config = {}
@@ -57,41 +44,50 @@ def create_llm(config_path: str = None) -> BaseLLM:
         with open(config_path, "r", encoding="utf-8") as f:
             config = yaml.safe_load(f) or {}
 
-    # ---- 2. 确定使用哪个 provider ----
     llm_config = config.get("llm", {})
     provider = llm_config.get("provider", "mock")
-
     print(f"[LLM Factory] 配置的 provider: {provider}")
 
-    # ---- 3. 根据 provider 创建实例 ----
+    if provider == "deepseek":
+        return _create_deepseek(llm_config.get("deepseek", {}))
     if provider == "zhipuai":
         return _create_zhipuai(llm_config.get("zhipuai", {}))
-    else:
-        print("[LLM Factory] 使用 Mock LLM（无需API，仅用于测试）")
-        from mock_llm import MockLLM
-        return MockLLM()
+
+    print("[LLM Factory] 使用 Mock LLM（无需API，仅用于测试）")
+    from mock_llm import MockLLM
+    return MockLLM()
+
+
+def _fallback_mock(reason: str) -> BaseLLM:
+    print(f"[LLM Factory] [WARN] {reason}")
+    print("  -> Falling back to Mock LLM")
+    from mock_llm import MockLLM
+    return MockLLM()
+
+
+def _create_deepseek(deepseek_config: dict) -> BaseLLM:
+    api_key = os.environ.get("DEEPSEEK_API_KEY") or deepseek_config.get("api_key", "")
+    if not _is_valid_api_key(api_key):
+        return _fallback_mock("DEEPSEEK_API_KEY not configured in .env")
+
+    from deepseek_llm import DeepSeekLLM
+    llm = DeepSeekLLM(
+        api_key=api_key,
+        model=deepseek_config.get("model", "deepseek-chat"),
+        base_url=deepseek_config.get("base_url", "https://api.deepseek.com"),
+        temperature=deepseek_config.get("temperature", 0.3),
+        max_tokens=deepseek_config.get("max_tokens", 4096),
+    )
+    if llm.is_available():
+        print(f"[LLM Factory] [OK] DeepSeek initialized, model: {llm.model}")
+        return llm
+    return _fallback_mock("DeepSeek SDK load failed")
 
 
 def _create_zhipuai(zhipuai_config: dict) -> BaseLLM:
-    """
-    创建智谱AI LLM 实例。
-
-    Args:
-        zhipuai_config: config.yaml 中 llm.zhipuai 下的配置
-
-    Returns:
-        ZhipuAILLM 或 MockLLM（如果没有API Key）
-    """
-    # API Key 优先从环境变量读，其次从 config.yaml 读
     api_key = os.environ.get("ZHIPUAI_API_KEY") or zhipuai_config.get("api_key", "")
-
-    if not api_key:
-        print("[LLM Factory] ⚠️  未找到 ZHIPUAI_API_KEY")
-        print("  → 请在 .env 文件中设置: ZHIPUAI_API_KEY=你的密钥")
-        print("  → 获取地址: https://open.bigmodel.cn/")
-        print("  → 暂时使用 Mock LLM 代替")
-        from mock_llm import MockLLM
-        return MockLLM()
+    if not _is_valid_api_key(api_key):
+        return _fallback_mock("ZHIPUAI_API_KEY not configured in .env")
 
     from zhipuai_llm import ZhipuAILLM
     llm = ZhipuAILLM(
@@ -100,12 +96,7 @@ def _create_zhipuai(zhipuai_config: dict) -> BaseLLM:
         temperature=zhipuai_config.get("temperature", 0.3),
         max_tokens=zhipuai_config.get("max_tokens", 1024),
     )
-
     if llm.is_available():
-        print(f"[LLM Factory] ✅ 智谱AI 初始化成功，模型: {llm.model}")
-    else:
-        print("[LLM Factory] ⚠️  智谱AI SDK 加载失败，使用 Mock LLM")
-        from mock_llm import MockLLM
-        return MockLLM()
-
-    return llm
+        print(f"[LLM Factory] [OK] ZhipuAI initialized, model: {llm.model}")
+        return llm
+    return _fallback_mock("ZhipuAI SDK load failed")

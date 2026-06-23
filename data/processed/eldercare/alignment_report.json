@@ -1,0 +1,130 @@
+{
+  "total_merged": 20,
+  "civil_affairs_count": 20,
+  "amap_poi_count": 0,
+  "matched_pairs": 0,
+  "civil_only": 20,
+  "amap_only": 0,
+  "match_details": [
+    {
+      "civil_name": "北京松堂关怀医院",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "泰康之家·燕园",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "北京市第一社会福利院",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "北京市第三社会福利院",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "北京椿萱茂（亦庄）老年公寓",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "上海市第一社会福利院",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "泰康之家·申园",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "上海市杨浦区社会福利院",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "上海瑞金护理院",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "深圳市社会福利中心",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "深圳市南山区社会福利中心",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "泰康之家·鹏园",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "广州市白云区社会福利服务中心",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "广州市越秀区羊城养老院",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "万科榕悦城市长者照料中心",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "苏州市姑苏区老年公寓",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "苏州工业园区社会福利中心",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "杭州市西湖区社会福利中心",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "成都市武侯区社会福利院",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    },
+    {
+      "civil_name": "武汉市江汉区社会福利院",
+      "amap_name": null,
+      "score": 0,
+      "status": "civil_only"
+    }
+  ]
+}
